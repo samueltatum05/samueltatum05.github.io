@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sam Tatum | Portfolio</title>
-
+    <title>Sam Tatum | Engineering Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,11 +15,10 @@
         <div class="logo">
             Sam Tatum
         </div>
-
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
+            <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -29,156 +26,132 @@
 
     <!-- Hero Section -->
     <section class="hero">
-
         <div class="hero-text">
-
-            <p class="intro">
-                Welcome, I am
-            </p>
-
-            <h1>
-                Sam Tatum
-            </h1>
-
-            <h2>
-                Student • Researcher • Engineer
-            </h2>
-
+            <p class="intro">Welcome, I am</p>
+            <h1>Sam Tatum</h1>
+            <h2>Student • Researcher • Engineer</h2>
             <p class="hero-description">
                 Senior Mechanical Engineering student at Villanova University with 8+ years of
                 hands-on design experience—spanning competitive robotics to thermal fluid
                 systems. Driven by a passion for biomedical innovation, I aim to leverage engineering to 
                 improve quality of life and expand accessibility for everyone.
             </p>
-
             <div class="hero-buttons">
-
-                <a href="#about" class="button">
-                    About Me
-                </a>
-
-                <a href="#projects" class="button button-outline">
-                    View My Work
-                </a>
-
+                <a href="#projects" class="button">View My Work</a>
+                <a href="#contact" class="button button-outline">Get In Touch</a>
             </div>
-
         </div>
 
+        <!-- HERO IMAGE PLACEHOLDER -->
+        <!-- Store your photo in an 'images' folder in your GitHub repo -->
+        <div class="hero-image-container">
+            <img src="images/profile-pic.jpg" alt="Sam Tatum">
+        </div>
     </section>
 
 
-    <!-- About Section -->
-    <section id="about" class="section">
-
+    <!-- About Section (Alternating Background Flow) -->
+    <section id="about" class="section bg-light">
         <h2>About Me</h2>
-
         <p>
             Beyond engineering, I find balance and creative 
             outlet in music by playing the trumpet, trombone, and euphonium with the Villanova Band. 
             In my free time, you will usually find me cooking, watching a movie, 
             working out, or traveling to new places.
         </p>
-
         <p>
             Above all, I am grateful for the opportunities I have been given. I view my education, background, 
             and skills as gifts from God meant to be used in service to others both in my everyday life and my work.
         </p>
-
     </section>
 
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-
         <h2>Projects</h2>
-
         <div class="projects">
 
+            <!-- Project 1 -->
             <div class="project-card">
-
-                <h3>Project One</h3>
-
-                <p>
-                    Describe your first project here.
-                </p>
-
+                <!-- PROJECT IMAGE PLACEHOLDER -->
+                <img src="images/project1-thumbnail.jpg" alt="Project One" class="project-image">
+                <div class="project-content">
+                    <h3>Project One</h3>
+                    <p>Describe your first project here. Explain the problem, your engineering approach, and the final outcome.</p>
+                </div>
             </div>
 
-
+            <!-- Project 2 -->
             <div class="project-card">
-
-                <h3>Project Two</h3>
-
-                <p>
-                    Describe your second project here.
-                </p>
-
+                <!-- PROJECT IMAGE PLACEHOLDER -->
+                <img src="images/project2-thumbnail.jpg" alt="Project Two" class="project-image">
+                <div class="project-content">
+                    <h3>Project Two</h3>
+                    <p>Describe your second project here. Highlight the tools, software (like CAD), or machining processes used.</p>
+                </div>
             </div>
 
-
+            <!-- Project 3 -->
             <div class="project-card">
-
-                <h3>Project Three</h3>
-
-                <p>
-                    Describe your third project here.
-                </p>
-
+                <!-- PROJECT IMAGE PLACEHOLDER -->
+                <img src="images/project3-thumbnail.jpg" alt="Project Three" class="project-image">
+                <div class="project-content">
+                    <h3>Project Three</h3>
+                    <p>Describe your third project here. Focus on the impact, data gathered, or testing phases.</p>
+                </div>
             </div>
 
         </div>
+    </section>
 
+
+    <!-- Resume Section (Alternating Background Flow) -->
+    <section id="resume" class="section bg-light">
+        <h2>Resume</h2>
+        
+        <!-- RESUME DOWNLOAD BUTTON -->
+        <!-- Store your PDF in an 'images' or 'docs' folder -->
+        <a href="images/Sam_Tatum_Resume.pdf" download class="button">Download Resume (PDF)</a>
+
+        <!-- VIEWABLE RESUME EMBED -->
+        <div class="resume-container">
+            <iframe src="images/Sam_Tatum_Resume.pdf" width="100%" height="800px" title="Sam Tatum Resume">
+                <!-- Fallback text for browsers that don't support iframes -->
+                <p>Your browser does not support PDFs. <a href="images/Sam_Tatum_Resume.pdf">Download the PDF</a>.</p>
+            </iframe>
+        </div>
     </section>
 
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-
         <h2>Contact</h2>
-
-        <p>
-            Feel free to get in touch.
-        </p>
-
-        <p>
-            Email:
-            <a href="mailto:samueltatum05@gmail.com">
-                samueltatum05@gmail.com
-            </a>
-        </p>
-
-        <p>
-            Phone:
-            <a href="mailto:484-889-0080">
-                (484) 889-0080
-            </a>
-        </p>
-        
-        <p>
-            <a href="https://www.linkedin.com/in/samtatum/">
-                LinkedIn
-            </a>
-
-            |
-
-            <a href="https://samueltatum05.github.io/">
-                GitHub
-            </a>
-        </p>
-
+        <div class="contact-links">
+            <p>
+                Feel free to get in touch.
+            </p>
+            <p>
+                Email: 
+                <a href="mailto:samueltatum05@gmail.com">samueltatum05@gmail.com</a>
+            </p>
+            <p>
+                Phone: 
+                <a href="tel:4848890080">(484) 889-0080</a>
+            </p>
+            <br>
+            <p>
+                <a href="https://www.linkedin.com/in/samtatum/" target="_blank">LinkedIn</a>
+                &nbsp;|&nbsp;
+                <a href="https://samueltatum05.github.io/" target="_blank">GitHub</a>
+            </p>
+        </div>
     </section>
 
 
     <!-- Footer -->
     <footer>
-
-        <p>
-            © 2026 Sam Tatum
-        </p>
-
+        <p>© 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
 
 </body>
-
 </html>
