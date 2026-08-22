@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title | Sam Tatum</title>
+    <title>Massive Project Title | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,46 +26,86 @@
     <!-- Project Hero Section -->
     <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <h1>Project Title</h1>
-            <h2>Short subtitle or engineering category (e.g., Thermal Fluid Systems)</h2>
+            <h1>Massive Project Title</h1>
+            <h2>High-Level Overview of the Entire System</h2>
         </div>
     </section>
 
-    <!-- Project Details Section -->
+    <!-- Main Project Details -->
     <section class="section bg-light">
-        <!-- Wrapper to keep text readable and centered -->
         <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
             
-            <!-- Main Project Image -->
-            <img src="images/project1-thumbnail.jpg" alt="Project Image" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
+            <img src="images/project1-main.jpg" alt="Main Project Overview" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
 
-            <h2>Overview</h2>
-            <p>Provide a high-level summary of the project here. What was the core goal, and what was your specific role on the team?</p>
+            <h2>The Big Picture</h2>
+            <p>Describe the overarching goal of this massive project. What was the massive system you built, and why was it broken down into sub-components?</p>
 
-            <h2>The Challenge</h2>
-            <p>Describe the specific engineering problem, constraints, or requirements you faced. Were there tight tolerances, material limitations, or budget constraints that made this difficult?</p>
+        </div>
+    </section>
 
-            <h2>The Solution</h2>
-            <p>Detail your engineering approach. Mention the specific CAD software, machining techniques, or analytical methods used (e.g., SolidWorks, FEA, CNC machining, Python for data analysis).</p>
+    <!-- Sub-Projects Section -->
+    <section class="section">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="text-align: center;">System Components (Sub-Projects)</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Click on a component below to see the detailed engineering breakdown.</p>
             
-            <!-- Optional Secondary Image or Diagram -->
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/project1-diagram.jpg" alt="CAD Diagram" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 1: CAD model detailing the assembly.</em></p>
+            <!-- Using your existing CSS grid for the sub-projects -->
+            <div class="projects">
+
+                <!-- Sub-Project 1 -->
+                <a href="project1-sub1.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <img src="images/sub1-thumbnail.jpg" alt="Sub-Project 1" class="project-image">
+                        <div class="project-content">
+                            <h3>Subsystem 1: Chassis</h3>
+                            <p>Detailed view of the structural design and FEA testing.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Sub-Project 2 -->
+                <a href="project1-sub2.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <img src="images/sub2-thumbnail.jpg" alt="Sub-Project 2" class="project-image">
+                        <div class="project-content">
+                            <h3>Subsystem 2: Drivetrain</h3>
+                            <p>Breakdown of the motor selection, gearing, and machining.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Sub-Project 3 -->
+                <a href="project1-sub3.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <img src="images/sub3-thumbnail.jpg" alt="Sub-Project 3" class="project-image">
+                        <div class="project-content">
+                            <h3>Subsystem 3: Thermal Management</h3>
+                            <p>Analysis of heat dissipation and cooling loops.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Sub-Project 4 -->
+                <a href="project1-sub4.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-card">
+                        <img src="images/sub4-thumbnail.jpg" alt="Sub-Project 4" class="project-image">
+                        <div class="project-content">
+                            <h3>Subsystem 4: Controls</h3>
+                            <p>Overview of the sensors, wiring, and logic implementation.</p>
+                        </div>
+                    </div>
+                </a>
+
             </div>
-
-            <h2>Results & Impact</h2>
-            <p>What was the final outcome? Include any measurable data, such as efficiency improvements, competition placements, successful test results, or lessons learned.</p>
             
-            <!-- Back Button -->
+            <!-- Back to Home Button -->
             <div style="margin-top: 4rem; text-align: center;">
-                <a href="index.html#projects" class="button button-outline">&larr; Back to Projects</a>
+                <a href="index.html#projects" class="button button-outline">&larr; Back to Main Portfolio</a>
             </div>
 
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
