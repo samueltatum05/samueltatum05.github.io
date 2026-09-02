@@ -41,15 +41,13 @@
             </div>
         </div>
 
-        <!-- HERO IMAGE PLACEHOLDER -->
-        <!-- Store your photo in an 'images' folder in your GitHub repo -->
         <div class="hero-image-container">
-            <img src="images/edited-photo (2).jpg">
+            <img src="images/edited-photo (2).jpg" alt="Sam Tatum Profile Photo">
         </div>
     </section>
 
 
-    <!-- About Section (Alternating Background Flow) -->
+    <!-- About Section -->
     <section id="about" class="section bg-light">
         <h2>About Me</h2>
         <p>
@@ -71,10 +69,11 @@
         <div class="projects">
 
             <!-- Project 1 -->
-            <a href="project1.html" style="text-decoration: none; color: inherit;">
+            <a href="project1.html" class="project-link">
                 <div class="project-card">
-                    <!-- PROJECT IMAGE PLACEHOLDER -->
-                    <img src="images/1.JPG" alt="Project One" class="project-image">
+                    <div class="project-image-wrapper">
+                        <img src="images/1.JPG" alt="Villanova Engineering Service Learning" class="project-image">
+                    </div>
                     <div class="project-content">
                         <h3>Villanova Engineering Service Learning</h3>
                         <p>Semester-long international engineering deployments across Africa and South America, focusing on the end-to-end design, manufacturing, 
@@ -86,22 +85,24 @@
             </a>
 
             <!-- Project 2 -->
-            <a href="project2.html" style="text-decoration: none; color: inherit;">
+            <a href="project2.html" class="project-link">
                 <div class="project-card">
-                    <!-- PROJECT IMAGE PLACEHOLDER -->
-                    <img src="images/Screenshot 2026-09-02 141032.png" alt="Project Two" class="project-image">
+                    <div class="project-image-wrapper">
+                        <img src="images/Screenshot 2026-09-02 141032.png" alt="Biomedical Engineering Research" class="project-image">
+                    </div>
                     <div class="project-content">
                         <h3>Biomedical Engineering Research</h3>
-                        <p>a</p>
+                        <p>Detailed blurb for research engineering project focus.</p>
                     </div>
                 </div>
             </a>
 
             <!-- Project 3 -->
-            <a href="project3.html" style="text-decoration: none; color: inherit;">
+            <a href="project3.html" class="project-link">
                 <div class="project-card">
-                    <!-- PROJECT IMAGE PLACEHOLDER -->
-                    <img src="images/IMG_2280.PNG" alt="Project Three" class="project-image">
+                    <div class="project-image-wrapper">
+                        <img src="images/IMG_2280.PNG" alt="Competition Robotics" class="project-image">
+                    </div>
                     <div class="project-content">
                         <h3>Competition Robotics</h3>
                         <p>Led mechanical engineering design, rapid iterative prototyping, and drive execution for FTC Team 7244 ("Out of the Box"), 
@@ -115,10 +116,11 @@
             </a>
 
             <!-- Project 4 -->
-            <a href="project4.html" style="text-decoration: none; color: inherit;">
+            <a href="project4.html" class="project-link">
                 <div class="project-card">
-                    <!-- PROJECT IMAGE PLACEHOLDER -->
-                    <img src="images/IMG_7301.jpg" alt="Project Four" class="project-image">
+                    <div class="project-image-wrapper">
+                        <img src="images/IMG_7301.jpg" alt="Thermal Fluid Systems" class="project-image">
+                    </div>
                     <div class="project-content">
                         <h3>Thermal Fluid Systems</h3>
                         <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications 
@@ -131,13 +133,14 @@
             </a>
 
             <!-- Project 5 -->
-            <a href="project5.html" style="text-decoration: none; color: inherit;">
+            <a href="project5.html" class="project-link">
                 <div class="project-card">
-                    <!-- PROJECT IMAGE PLACEHOLDER -->
-                    <img src="images/project5-thumbnail.jpg" alt="Project Five" class="project-image">
+                    <div class="project-image-wrapper">
+                        <img src="images/project5-thumbnail.jpg" alt="BCS Motion" class="project-image">
+                    </div>
                     <div class="project-content">
                         <h3>BCS Motion</h3>
-                        <p>robotics automation</p>
+                        <p>Design, fabrication, and motion control programming for industrial automation systems including SCARA/6-axis robotics, custom end-effectors, and PLC interfaces.</p>
                     </div>
                 </div>
             </a>
@@ -146,19 +149,15 @@
     </section>
 
 
-    <!-- Resume Section (Alternating Background Flow) -->
+    <!-- Resume Section -->
     <section id="resume" class="section bg-light">
         <h2>Resume</h2>
 
-        <!-- RESUME DOWNLOAD BUTTON -->
-        <!-- Store your PDF in an 'images' or 'docs' folder -->
         <a href="images/Sam Tatum.pdf" download class="button">Download Resume (PDF)</a>
 
-        <!-- VIEWABLE RESUME EMBED -->
         <div class="resume-container">
             <iframe src="images/Sam Tatum.pdf" width="100%" height="1120px" title="Sam Tatum Resume">
-                <!-- Fallback text for browsers that don't support iframes -->
-                <p>Your browser does not support PDFs. <a href="images/Sam_Tatum_Resume.pdf">Download the PDF</a>.</p>
+                <p>Your browser does not support PDFs. <a href="images/Sam Tatum.pdf">Download the PDF</a>.</p>
             </iframe>
         </div>
     </section>
@@ -168,17 +167,9 @@
     <section id="contact" class="section">
         <h2>Contact</h2>
         <div class="contact-links">
-            <p>
-                Feel free to get in touch.
-            </p>
-            <p>
-                Email: 
-                <a href="mailto:samueltatum05@gmail.com">samueltatum05@gmail.com</a>
-            </p>
-            <p>
-                Phone: 
-                <a href="tel:4848890080">(484) 889-0080</a>
-            </p>
+            <p>Feel free to get in touch.</p>
+            <p>Email: <a href="mailto:samueltatum05@gmail.com">samueltatum05@gmail.com</a></p>
+            <p>Phone: <a href="tel:4848890080">(484) 889-0080</a></p>
             <br>
             <p>
                 <a href="https://www.linkedin.com/in/samtatum/" target="_blank">LinkedIn</a>
