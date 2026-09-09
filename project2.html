@@ -121,12 +121,12 @@
                 <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 8: Custom generated progress waitbar.</em></p>
             </div>
             
-            <h3>12. Automated, Consolidated Excel Export</h3>
-            <p>Manually copying results out of the MATLAB workspace after every run wasn't sustainable once the tool was producing this many metrics across multiple analysis modes. I added automatic export to a timestamped, multi-sheet Excel workbook (knee summary, cell summary, per-cell individual data, and 3D volume data), with a helper function that safely merges tables even when different runs produce slightly different columns. This meant every run's output was immediately usable in downstream statistical analysis without any manual data wrangling.</p>
+            <h3>12. Automated Excel Export</h3>
+            <p>Manually copying results from the MATLAB workspace after every run wasn't sustainable once the tool produced this many metrics across multiple analysis modes. I added automatic export to a timestamped, multi-sheet Excel workbook (knee summary, cell summary, per-cell individual data, and 3D volume data), with a helper function that safely merges tables even when different runs produce slightly different columns. This allowed every run's output to be immediately consolidated and usable in downstream statistical analysis without any manual data wrangling.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/bpg-placeholder-excel.jpg" alt="Automated Excel export output" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 6: Consolidated, multi-sheet Excel output automatically generated at the end of a run.</em></p>
+                <img src="images/Mat_9" alt="Automated Excel export output" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 9: Consolidated, multi-sheet Excel output automatically generated at the end of a run.</em></p>
             </div>
 
             <h3>13. Session Looping for Batch Convenience</h3>
