@@ -78,15 +78,15 @@
 
             <div style="text-align: center; margin: 2rem 0;">
                 <img src="images/Mat_3.png" alt=".lif series selection window" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 3: User's command window series selection catalog.</em></p>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 3: Example of user's command window series selection catalog.</em></p>
             </div>
             
             <h3>7. 3D Functionality for Z-Stacks</h3>
-            <p>Confocal acquisitions are frequently z-stacks rather than single 2D planes. I extended the thresholding and masking logic into the third dimension, building full 3D binary volumes per channel and computing volumetric overlap statistics in addition to the existing 2D metrics. This was one of the more computationally expensive additions — 3D masking, isosurface rendering, and volumetric overlap all scale with stack depth — so I made it opt-in per run rather than mandatory, to avoid punishing runtime on 2D-only analyses.</p>
+            <p>Confocal acquisitions are frequently z-stacks rather than single 2D planes. I extended the thresholding and masking logic into the third dimension, building full 3D binary volumes per channel and computing volumetric overlap statistics in addition to the existing 2D metrics. This was one of the more computationally expensive additions (3D masking, isosurface rendering, and volumetric overlap all scale with stack depth), so I made it opt-in per run rather than mandatory, to avoid punishing runtime on 2D-only analyses.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/bpg-placeholder-3d.jpg" alt="3D z-stack volumetric rendering" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 3: Volumetric 3D reconstruction from a z-stack acquisition.</em></p>
+                <img src="images/Mat_4.png" alt="3D z-stack volumetric rendering" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 4: Volumetric 3D reconstruction from a z-stack acquisition.</em></p>
             </div>
 
             <h3>8. Individual Cell Indexing</h3>
