@@ -45,11 +45,12 @@
             <h2>The Challenge</h2>
             <p>Quantifying where a fluorescent signal localizes within cells and tissue is normally a slow, manual process. A researcher must eyeball or hand-trace regions of interest image by image, which doesn't scale to a real dataset and introduces human inconsistency. Additionally, raw confocal microscopy data comes packaged in proprietary multi-series, multi-channel, and often multi-z-plane files (.lif). Before any data could be measured, the tool needed to reliably read the format, correctly separate fluorophore channels from real image data, and adapt to files with different numbers of channels and stack depths. The goal was a single tool flexible enough to go from a raw microscope file straight to publication-ready, comparable numbers with minimal manual intervention.</p>
 
-            <h2>The Solution: An Iteratively Built Analysis Pipeline</h2>
-            <p>Rather than designing the final tool up front, I built this pipeline in stages — each one solving a real limitation I ran into with the version before it. The result tells the story of the project as much as the tool itself does.</p>
+            <h2>The Solution:</h2>
+            <h2>Analysis Pipeline Built Through Iteration</h2>
+            <p>Rather than designing the final tool up front, I built this pipeline in stages. Each iteration solved a real limitation I ran into using the previous version.</p>
 
             <h3>1. Starting Point: Basic Color Detection and Masking</h3>
-            <p>The project began as a simple proof of concept: given an image, detect pixels belonging to a handful of target colors and generate binary masks for each one. At this stage the code did nothing biologically meaningful — it was purely a color-segmentation exercise using basic intensity thresholding to answer the question, "can I reliably isolate a color channel and turn it into a clean mask?" This established the core masking logic (threshold &rarr; binary mask &rarr; clean up with morphological operations) that every later version of the pipeline still relies on.</p>
+            <p>The project began as a simple proof of concept: given an image, detect pixels belonging to a handful of target colors and generate binary masks for each one. At this stage, the code did nothing biologically meaningful; it was purely a color-segmentation exercise using basic intensity thresholding to answer the question, "can I reliably isolate a color channel and turn it into a clean mask?" This established the core masking logic (threshold &rarr; binary mask &rarr; clean up with morphological operations) that every later version of the pipeline still relies on.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
                 <img src="images/bpg-placeholder-masking.jpg" alt="Basic color masking output" style="max-width: 100%; border-radius: 8px;">
