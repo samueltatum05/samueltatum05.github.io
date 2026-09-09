@@ -125,16 +125,16 @@
             <p>Manually copying results from the MATLAB workspace after every run wasn't sustainable once the tool produced this many metrics across multiple analysis modes. I added automatic export to a timestamped, multi-sheet Excel workbook (knee summary, cell summary, per-cell individual data, and 3D volume data), with a helper function that safely merges tables even when different runs produce slightly different columns. This allowed every run's output to be immediately consolidated and usable in downstream statistical analysis without any manual data wrangling.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/Mat_9" alt="Automated Excel export output" style="max-width: 100%; border-radius: 8px;">
+                <img src="images/Mat_9.png" alt="Automated Excel export output" style="max-width: 100%; border-radius: 8px;">
                 <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 9: Consolidated, multi-sheet Excel output automatically generated at the end of a run.</em></p>
             </div>
 
             <h3>13. Session Looping for Batch Convenience</h3>
-            <p>Finally, I added a continuous session loop so that after finishing one series or file, the user is prompted to either analyze another series from the same file or load an entirely new file, with every result accumulating into the same master tables before a single consolidated export at the end of the session. This turned the tool from "run once per file" into "run once per research session," matching how the data was actually being collected and analyzed in practice.</p>
+            <p>Finally, I added a continuous session loop so that after finishing one series or file, the user is prompted to either analyze another series from the same file or load an entirely new file, with every result accumulating into the same master tables before a single consolidated export at the end of the session. This turned the tool from running once per file into running once per research session, matching how the data was actually being collected and analyzed in practice.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/bpg-placeholder-excel.jpg" alt="Automated Excel export output" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 6: Consolidated, multi-sheet Excel output automatically generated at the end of a run.</em></p>
+                <img src="images/Mat_10.png" alt="Command window session loop" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 10: Command window session looping prompt and subsequent run.</em></p>
             </div>
             
             <h3>14. Most Recent Refinement: Rethinking the Overlap Metric</h3>
