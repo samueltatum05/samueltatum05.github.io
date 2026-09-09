@@ -60,11 +60,11 @@
             <p>Once masking was reliable, the next iteration added the metric calculations the research required: percent area coverage of each region and BPG overlap percentage (defined as "of the pixels making up a given compartment, what percentage are BPG-positive?"). This turned the tool from a segmentation demo into an actual quantification instrument. The tradeoff introduced here was one of interpretation: overlap percentage answers "how concentrated is BPG within this region," but doesn't say anything about how much of the total BPG signal in the image that region accounted for.</p>
 
             <h3>3. Adding Diagnostic Figures</h3>
-            <p>As soon as real thresholds and real masks were being generated, it became clear I needed a way to visually audit whether the segmentation was actually correct before trusting the numbers. I added a suite of diagnostic figures — mask overlays, per-region coverage bar charts, and overlap-percentage bar charts — purely for troubleshooting convenience. This slowed down each run slightly, but the tradeoff was worth it: without visual confirmation, a bad threshold or mis-segmented region could silently corrupt an entire dataset, and these figures made bad segmentation immediately obvious.</p>
+            <p>As soon as masks were being generated, it became clear I needed a way to visually audit whether the segmentation was accurate before trusting the code's data. I added multiple diagnostic figures (mask overlays, per-region coverage bar charts, and overlap-percentage bar charts) purely for troubleshooting convenience. This slowed down each run slightly, but the tradeoff was worth it. Without visual confirmation, a bad threshold or mis-segmented region could silently corrupt an entire dataset, and these figures make bad segmentation immediately obvious.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/bpg-placeholder-diagnostics.jpg" alt="Diagnostic mask overlay figures" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 2: Diagnostic mask overlays used to visually verify segmentation quality.</em></p>
+                <img src="images/Mat_2.png" alt="Diagnostic mask overlay figures" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 2: Diagnostic mask overlays used to verify segmentation quality visually.</em></p>
             </div>
 
             <h3>4. Generalizing from "Color" to "Channel"</h3>
