@@ -68,14 +68,19 @@
             </div>
 
             <h3>4. Generalizing from "Color" to "Channel"</h3>
-            <p>The early version worked on RGB color images, which is not how confocal microscopy data is structured — confocal data is multi-channel intensity data (one grayscale image per laser/fluorophore), not a single RGB photo. I rewrote the core detection logic to operate on arbitrary intensity channels rather than hard-coded colors, mapping each channel to a biological target (DAPI/nucleus, Cy5.5/BPG target, plasma membrane, perinuclear matrix) via a configurable lookup table. This was the pivotal architectural change that took the project from "a color-masking script" to "a confocal microscopy quantification tool."</p>
+            <p>The early version worked on RGB color images, which is not how confocal microscopy data is structured. Confocal data is multi-channel intensity data (one grayscale image per laser/fluorophore), not a single RGB photo. I rewrote the core detection logic to operate on arbitrary intensity channels rather than hard-coded colors, mapping each channel to a biological target (Nucleus, BPG target, Plasma Membrane, Perinuclear Matrix) via a configurable lookup table. This pivotal architectural change took the project from a color-masking script to a confocal microscopy quantification tool.</p>
 
             <h3>5. Reading .lif Files Directly with Bio-Formats</h3>
-            <p>Up to this point, images had to be manually exported and saved before the script could touch them, which was slow and introduced an unnecessary manual step. I integrated the Bio-Formats MATLAB toolbox so the pipeline could open Leica's native .lif container format directly, pulling both the raw pixel data and the embedded OME metadata — including the microscope's physical pixel calibration — straight from the source file. This removed a manual export step from the workflow entirely and meant measurements could be reported in real-world microns&sup2; in addition to raw pixels, at the cost of adding an external toolbox dependency.</p>
+            <p>Up to this point, images had to be manually exported and saved before the script could touch them, which was slow and introduced an unnecessary manual step. I integrated the Bio-Formats MATLAB toolbox so the pipeline could open Leica's native .lif container format directly, pulling both the raw pixel data and the embedded OME metadata (including the microscope's physical pixel calibration) straight from the source file. This removed a manual export step from the workflow entirely and meant measurements could be reported in real-world microns in addition to raw pixels, at the cost of adding an external toolbox dependency.</p>
 
             <h3>6. Series Selection Within a File</h3>
-            <p>A single .lif file frequently contains many imaging series (different fields of view, different acquisition settings, etc.), not just one image. I added the ability to target and analyze a specific series by index, or loop through several, instead of forcing the script to process an entire file as if it were one dataset. This gave the tool the granularity actual lab workflows needed.</p>
+            <p>A single .lif file frequently contains many imaging series (different fields of view, different acquisition settings, etc.), not just one image. I added the ability to target and analyze a specific series by index, instead of forcing the script to process an entire file as one dataset. This gave the tool the granularity actual lab workflows needed.</p>
 
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="images/Mat_3.png" alt=".lif series selection window" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 3: User's command window series selection catalog.</em></p>
+            </div>
+            
             <h3>7. 3D Functionality for Z-Stacks</h3>
             <p>Confocal acquisitions are frequently z-stacks rather than single 2D planes. I extended the thresholding and masking logic into the third dimension, building full 3D binary volumes per channel and computing volumetric overlap statistics in addition to the existing 2D metrics. This was one of the more computationally expensive additions — 3D masking, isosurface rendering, and volumetric overlap all scale with stack depth — so I made it opt-in per run rather than mandatory, to avoid punishing runtime on 2D-only analyses.</p>
 
