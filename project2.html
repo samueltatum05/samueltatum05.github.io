@@ -116,6 +116,11 @@
             <h3>11. Progress Feedback for Long Runtimes</h3>
             <p>As the pipeline grew to include 3D volumetric analysis, per-cell watershed segmentation, and multiple diagnostic figures, individual runs got noticeably slower. I added a waitbar with a live ETA calculation so the user has visibility into progress during long batch runs instead of staring at a frozen-looking MATLAB window.</p>
 
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="images/Mat_8.png" alt="Progress Waitbar" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 8: Custom generated progress waitbar.</em></p>
+            </div>
+            
             <h3>12. Automated, Consolidated Excel Export</h3>
             <p>Manually copying results out of the MATLAB workspace after every run wasn't sustainable once the tool was producing this many metrics across multiple analysis modes. I added automatic export to a timestamped, multi-sheet Excel workbook (knee summary, cell summary, per-cell individual data, and 3D volume data), with a helper function that safely merges tables even when different runs produce slightly different columns. This meant every run's output was immediately usable in downstream statistical analysis without any manual data wrangling.</p>
 
@@ -127,6 +132,11 @@
             <h3>13. Session Looping for Batch Convenience</h3>
             <p>Finally, I added a continuous session loop so that after finishing one series or file, the user is prompted to either analyze another series from the same file or load an entirely new file, with every result accumulating into the same master tables before a single consolidated export at the end of the session. This turned the tool from "run once per file" into "run once per research session," matching how the data was actually being collected and analyzed in practice.</p>
 
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="images/bpg-placeholder-excel.jpg" alt="Automated Excel export output" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 6: Consolidated, multi-sheet Excel output automatically generated at the end of a run.</em></p>
+            </div>
+            
             <h3>14. Most Recent Refinement: Rethinking the Overlap Metric</h3>
             <p>The most recent iteration revisited the original overlap-percentage metric from early in the project. That metric only ever answered "of this region's own area, what percentage is BPG-positive" — it couldn't say anything about how the total pool of BPG signal in an image was distributed across regions. I removed an undefined, non-anatomical "everything outside the tracked regions" category that wasn't providing useful data, and added a complementary "total BPG localization percentage" metric using the exact same regional masks: of all BPG-positive pixels in the image, what percentage physically fall inside each compartment (and, at the single-cell level, inside each individual cell's compartments). This gives a second, directly comparable lens on the same underlying data, useful for comparing results across different segmentation or thresholding models applied to the same image.</p>
 
