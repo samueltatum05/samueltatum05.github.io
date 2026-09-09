@@ -85,15 +85,15 @@
             <p>Confocal acquisitions are frequently z-stacks rather than single 2D planes. I extended the thresholding and masking logic into the third dimension, building full 3D binary volumes per channel and computing volumetric overlap statistics in addition to the existing 2D metrics. This was one of the more computationally expensive additions (3D masking, isosurface rendering, and volumetric overlap all scale with stack depth), so I made it opt-in per run rather than mandatory, to avoid punishing runtime on 2D-only analyses.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/Mat_4.png" alt="3D z-stack volumetric rendering" style="max-width: 100%; border-radius: 8px;">
+                <img src="images/Mat_5.png" alt="3D z-stack volumetric rendering" style="max-width: 100%; border-radius: 8px;">
                 <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 4: Volumetric 3D reconstruction from a z-stack acquisition.</em></p>
             </div>
 
             <h3>8. Individual Cell Indexing</h3>
-            <p>Whole-image statistics answer "how much BPG signal is present overall," but not "which cells are driving that signal." I implemented single-cell segmentation using a Euclidean distance transform on the binary nucleus mask, combined with an H-minima transform to suppress over-segmentation, followed by a watershed transform to split touching or clustered nuclei into individually indexed cells. Each detected cell is then treated as its own region of interest for every downstream metric. The tradeoff is that watershed segmentation is sensitive to its smoothing/suppression parameters — too little suppression fragments a single nucleus into several "cells," too much merges genuinely separate cells — so this required careful tuning, and became one of the strongest use cases for the diagnostic figures added earlier.</p>
+            <p>Whole-image statistics answer "how much BPG signal is present overall," but not "which cells are driving that signal." I implemented single-cell segmentation using a Euclidean distance transform on the binary nucleus mask, combined with an H-minima transform to suppress over-segmentation, followed by a watershed transform to split touching or clustered nuclei into individually indexed cells. Each detected cell was given its own region of interest for every downstream metric. The tradeoff is that watershed segmentation is sensitive to its smoothing/suppression parameters (too little suppression fragments a single nucleus into several "cells," too much merges genuinely separate cells), so this required careful tuning and became one of the strongest use cases for the diagnostic figures added earlier.</p>
 
             <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/bpg-placeholder-cellindex.jpg" alt="Watershed-based individual cell indexing" style="max-width: 100%; border-radius: 8px;">
+                <img src="images/Mat_4.png" alt="Watershed-based individual cell indexing" style="max-width: 100%; border-radius: 8px;">
                 <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 4: Individually indexed cells identified via watershed segmentation.</em></p>
             </div>
 
