@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BPG Color Quantification | Sam Tatum</title>
+    <title>BPG Fluorescence Quantification | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,7 +26,7 @@
     <!-- Project Hero Section -->
     <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <h1>BPG Color Quantification</h1>
+            <h1>BPG Fluorescence Quantification</h1>
             <h2>MATLAB Image Analysis for Confocal Microscopy</h2>
         </div>
     </section>
@@ -40,10 +40,10 @@
             <img src="images/bpg-thumbnail.jpg" alt="BPG Color Quantification Project" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
 
             <h2>Overview</h2>
-            <p>This MATLAB pipeline was built for a research project quantifying the fluorescent signal of BPG (biomimetic proteoglycan) within cells, in order to explore where the compound localizes and concentrates at both the cellular and tissue level. It is an interactive, user-guided tool that reads raw Leica confocal microscopy files (.lif) directly, automatically segments biologically relevant regions (nucleus, perinuclear matrix, plasma membrane, and — at the tissue scale — femur, tibia, and meniscus), and calculates the percentage of BPG signal overlapping with and localizing to each region. It supports both single-cell (micro-scale) and whole-joint (macro-scale) analysis, including full 3D z-stack quantification, and exports every measurement to a consolidated, timestamped Excel workbook so results from many files and imaging sessions can be compared side by side. The tool was designed with full user interactivity in mind — file selection, series selection, segmentation mode, and thresholding sensitivity are all configurable at runtime — so it could be used repeatedly across a large image dataset without being rewritten for each new file.</p>
+            <p>This MATLAB pipeline was built for a research project quantifying the fluorescent signal of BPG (biomimetic proteoglycan) within cells, to explore where the compound localizes and concentrates at both the cellular and tissue level. It is an interactive, user-guided tool that reads raw Leica confocal microscopy files (.lif) directly, automatically segments biologically relevant regions (nucleus, perinuclear matrix, plasma membrane, and macroscopic tissue regions), and calculates the percentage of BPG signal overlapping with and localizing to each region. It supports both single-cell and comprehensive joint analysis, including full 3D z-stack quantification, and exports every measurement to a consolidated Excel workbook so quantification data from multiple input files can be compared. The tool was designed with full user interactivity in mind (file/series selection, manual segmentation mode, and thresholding sensitivity are all configurable at runtime) so it could be used repeatedly across a large image dataset without requiring rewriting for each new file.</p>
 
             <h2>The Challenge</h2>
-            <p>Quantifying where a fluorescent signal localizes within cells and tissue is normally a slow, manual process — a researcher has to eyeball or hand-trace regions of interest image by image, which doesn't scale to a real dataset and introduces reviewer-to-reviewer inconsistency. On top of that, raw confocal data comes packaged in proprietary multi-series, multi-channel, and often multi-z-plane files (.lif), so before any biology could even be measured, the tool needed to reliably read that format, correctly separate fluorophore channels from real image data, and adapt to files with different numbers of channels and stack depths. The goal was a single tool flexible enough to go from a raw microscope file straight to publication-ready, comparable numbers with minimal manual intervention.</p>
+            <p>Quantifying where a fluorescent signal localizes within cells and tissue is normally a slow, manual process. A researcher must eyeball or hand-trace regions of interest image by image, which doesn't scale to a real dataset and introduces human inconsistency. Additionally, raw confocal microscopy data comes packaged in proprietary multi-series, multi-channel, and often multi-z-plane files (.lif). Before any data could be measured, the tool needed to reliably read the format, correctly separate fluorophore channels from real image data, and adapt to files with different numbers of channels and stack depths. The goal was a single tool flexible enough to go from a raw microscope file straight to publication-ready, comparable numbers with minimal manual intervention.</p>
 
             <h2>The Solution: An Iteratively Built Analysis Pipeline</h2>
             <p>Rather than designing the final tool up front, I built this pipeline in stages — each one solving a real limitation I ran into with the version before it. The result tells the story of the project as much as the tool itself does.</p>
