@@ -98,8 +98,13 @@
             </div>
 
             <h3>9. Custom Signal Thresholding</h3>
-            <p>Fixed or manually-picked thresholds don't generalize well across images with different background noise levels, so I implemented an adaptive thresholding scheme based on median absolute deviation (MAD) noise estimation: the background noise level is statistically estimated per channel, and the active threshold is set at a configurable multiplier above that estimated noise floor, with a fixed floor enforced as a safety net. This let the same script handle images with meaningfully different signal-to-noise characteristics without requiring the user to hand-pick a threshold for every single file.</p>
+            <p>Fixed or manually picked thresholds don't generalize well across images with different background noise levels, so I implemented an adaptive thresholding scheme based on median absolute deviation (MAD) noise estimation. The background noise level is statistically estimated per channel, and the active threshold is set at a configurable multiplier above that estimated noise floor, with a fixed floor enforced as a safety net. This lets the same script handle images with meaningfully different signal-to-noise characteristics without requiring the user to hand-pick a threshold for every single file.</p>
 
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="images/Mat_6.png" alt="Signal Thresholding" style="max-width: 100%; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 6: Troubleshooting window for dynamic signal threshold tuning.</em></p>
+            </div>
+            
             <h3>10. Macro-Scale Knee Region Analysis</h3>
             <p>Cellular-level detail is only half the picture for this research question — I also needed tissue-level context. I built a parallel analysis mode for whole knee-joint images that automatically detects the joint line and separates femur, tibia, and meniscus regions, with a user-guided assisted mode and a fully manual freehand-drawing mode as fallbacks when automatic segmentation isn't reliable enough for a given image. This let the same tool answer both "where in this cell is BPG concentrating" and "which anatomical region of the joint has the most signal," at the cost of maintaining two somewhat different segmentation pipelines within one codebase.</p>
 
