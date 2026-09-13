@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thermal Fluid Systems Design | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .project-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+        .project-title {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -32,131 +71,39 @@
 
     <!-- Overview -->
     <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: center; padding: 2rem 1rem;">
             <h2>The Big Picture</h2>
-            <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications
-                ranging from solar thermal energy storage to data center GPU server rack cooling loops. Evaluated thermodynamic and
-                hydraulic trade-offs (balancing heat transfer effectiveness against pressure drop and pump power
-                demands) while physically fabricating and testing a functional heat exchanger and cold plate to
-                empirically validate theoretical models.</p>
+            <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications ranging from solar thermal energy storage to data center GPU server rack cooling loops. Evaluated thermodynamic and hydraulic trade-offs (balancing heat transfer effectiveness against pressure drop and pump power demands) while physically fabricating and testing a functional heat exchanger and cold plate to empirically validate theoretical models.</p>
         </div>
-    </section>
-
-    <!-- Server Liquid Cooling System -->
-    <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            <h2>Server Liquid Cooling System</h2>
-
-            <div class="resume-container">
-                <iframe src="images/TF1a.pdf" width="100%" height="1120px" title="Server Liquid Cooling System - Part 1">
-                    <p>Your browser does not support PDFs. <a href="images/TF1a.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-
-            <div class="resume-container">
-                <iframe src="images/TF1b.pdf" width="100%" height="1120px" title="Server Liquid Cooling System - Part 2">
-                    <p>Your browser does not support PDFs. <a href="images/TF1b.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Center Rack Liquid Cooling System -->
-    <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            <h2>Data Center Rack Liquid Cooling System</h2>
-
-            <div class="resume-container">
-                <iframe src="images/TF2a.pdf" width="100%" height="1120px" title="Data Center Rack Liquid Cooling System - Part 1">
-                    <p>Your browser does not support PDFs. <a href="images/TF2a.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-
-            <div class="resume-container">
-                <iframe src="images/TF2b.pdf" width="100%" height="1120px" title="Data Center Rack Liquid Cooling System - Part 2">
-                    <p>Your browser does not support PDFs. <a href="images/TF2b.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deep Space Probe Power System -->
-    <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            <h2>Deep Space Probe Power System</h2>
-
-            <div class="resume-container">
-                <iframe src="images/TF3a.pdf" width="100%" height="1120px" title="Deep Space Probe Power System - Part 1">
-                    <p>Your browser does not support PDFs. <a href="images/TF3a.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-
-            <div class="resume-container">
-                <iframe src="images/TF3b.pdf" width="100%" height="1120px" title="Deep Space Probe Power System - Part 2">
-                    <p>Your browser does not support PDFs. <a href="images/TF3b.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Thermal Energy Storage -->
-    <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            <h2>Thermal Energy Storage</h2>
-
-            <div class="resume-container">
-                <iframe src="images/TF4.pdf" width="100%" height="1120px" title="Thermal Energy Storage">
-                    <p>Your browser does not support PDFs. <a href="images/TF4.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mini Heat Exchanger -->
-    <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            <h2>Mini Heat Exchanger</h2>
-
-            <div class="resume-container">
-                <iframe src="images/TFHX.pdf" width="100%" height="1120px" title="Mini Heat Exchanger">
-                    <p>Your browser does not support PDFs. <a href="images/TFHX.pdf">Download the PDF</a>.</p>
-                </iframe>
-            </div>
-            
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/HX1.png" alt="HX1" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 1: Aluminum plate used for the top frame of the heat exchanger.</em></p>
-            </div>
-
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/HX2.png" alt="HX2" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 2: Aluminum frame post-machining with copper tubing fitted inside.</em></p>
-            </div>
-
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/HX3.png" alt="HX3" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 3: Assembly of the heat exchanger's outer insulating shell and fan subsystem.</em></p>
-            </div>
-
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/HX4.png" alt="HX4" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Figure 4: Final assembly of heat exchanger prototype.</em></p>
-            </div>
-
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="images/HXC.mov" alt="HXC" style="max-width: 100%; border-radius: 8px;">
-                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><em>Video 1: Manufacturing and thermal testing.</em></p>
-            </div>
-            
-            <!-- Back Button -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <a href="index.html#projects" class="button button-outline">&larr; Back to Projects</a>
-            </div>
+        
+        <!-- Project Selection Grid -->
+        <div class="project-grid">
+            <a href="server-cooling.html" class="project-card">
+                <!-- Replace src with an actual thumbnail image from your project -->
+                <img src="images/server-thumb.jpg" alt="Server Liquid Cooling" class="project-image">
+                <div class="project-title">Server Liquid Cooling System</div>
+            </a>
+            <a href="data-center-cooling.html" class="project-card">
+                <img src="images/datacenter-thumb.jpg" alt="Data Center Cooling" class="project-image">
+                <div class="project-title">Data Center Rack Liquid Cooling System</div>
+            </a>
+            <a href="deep-space.html" class="project-card">
+                <img src="images/space-thumb.jpg" alt="Deep Space Probe" class="project-image">
+                <div class="project-title">Deep Space Probe Power System</div>
+            </a>
+            <a href="thermal-storage.html" class="project-card">
+                <img src="images/thermal-thumb.jpg" alt="Thermal Energy Storage" class="project-image">
+                <div class="project-title">Thermal Energy Storage</div>
+            </a>
+            <a href="mini-hx.html" class="project-card">
+                <img src="images/HX4.png" alt="Mini Heat Exchanger" class="project-image">
+                <div class="project-title">Mini Heat Exchanger</div>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer style="text-align: center; padding: 2rem;">
         <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
 
