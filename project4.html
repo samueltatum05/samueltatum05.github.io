@@ -9,8 +9,8 @@
         .project-list {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-            max-width: 800px; /* Matches the text width */
+            gap: 2rem; /* Increased gap slightly for larger buttons */
+            max-width: 900px; /* Widened slightly to accommodate larger buttons */
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -23,38 +23,44 @@
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
-            flex-direction: row; /* Puts image and text side-by-side */
-            align-items: center;
+            flex-direction: row;
+            align-items: stretch; /* Ensures text block and image match heights */
+            min-height: 220px; /* Makes the entire button taller and more substantial */
         }
         .project-card:hover {
-            transform: translateX(8px); /* Slides right slightly on hover */
+            transform: translateX(8px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .project-image {
-            width: 200px;
-            height: 120px;
+            width: 50%; /* Forces image to take up exactly half the bar */
             object-fit: cover;
             background-color: #eee;
-            flex-shrink: 0; /* Prevents the image from squishing */
+            flex-shrink: 0;
         }
         .project-title {
-            padding: 1.5rem 2rem;
-            font-size: 1.25rem;
+            width: 50%; /* Gives the text the other half of the bar */
+            padding: 2rem 3rem;
+            font-size: 1.4rem; /* Slightly larger text to match larger buttons */
             font-weight: bold;
             text-align: left;
+            display: flex;
+            align-items: center; /* Vertically centers the text */
+            box-sizing: border-box;
         }
         
-        /* Mobile fallback so it looks good on phones */
+        /* Mobile fallback so it stacks cleanly on phones */
         @media (max-width: 600px) {
             .project-card {
                 flex-direction: column;
             }
             .project-image {
                 width: 100%;
-                height: 150px;
+                height: 200px;
             }
             .project-title {
+                width: 100%;
                 padding: 1.5rem;
+                justify-content: center;
             }
         }
     </style>
@@ -74,16 +80,16 @@
         </div>
     </nav>
 
-    <!-- Project Hero Section -->
-    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <!-- Project Hero Section (min-height removed, padding adjusted to shrink gap) -->
+    <section class="hero" style="padding: 4rem 1rem 1rem 1rem; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
             <h1>Thermal Fluid Systems Design</h1>
         </div>
     </section>
 
-    <!-- Overview -->
+    <!-- Overview (top padding reduced to pull it closer to the title) -->
     <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; padding: 2rem 1rem;">
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; padding: 1rem 1rem 2rem 1rem;">
             <h2>The Big Picture</h2>
             <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications ranging from solar thermal energy storage to data center GPU server rack cooling loops. Evaluated thermodynamic and hydraulic trade-offs (balancing heat transfer effectiveness against pressure drop and pump power demands) while physically fabricating and testing a functional heat exchanger and cold plate to empirically validate theoretical models.</p>
         </div>
