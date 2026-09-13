@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,62 +10,29 @@
         .project-list {
             display: flex;
             flex-direction: column;
-            gap: 2rem; /* Increased gap slightly for larger buttons */
-            max-width: 900px; /* Widened slightly to accommodate larger buttons */
-            margin: 2rem auto;
-            padding: 0 1rem;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 2rem auto 0 auto;
         }
         .project-card {
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            overflow: hidden;
             text-decoration: none;
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: row;
-            align-items: stretch; /* Ensures text block and image match heights */
-            min-height: 220px; /* Makes the entire button taller and more substantial */
+            padding: 1rem 1.5rem;
+            font-size: 1.05rem;
+            font-weight: bold;
+            text-align: center;
         }
         .project-card:hover {
             transform: translateX(8px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .project-image {
-            width: 50%; /* Forces image to take up exactly half the bar */
-            object-fit: cover;
-            background-color: #eee;
-            flex-shrink: 0;
-        }
-        .project-title {
-            width: 50%; /* Gives the text the other half of the bar */
-            padding: 2rem 3rem;
-            font-size: 1.4rem; /* Slightly larger text to match larger buttons */
-            font-weight: bold;
-            text-align: left;
-            display: flex;
-            align-items: center; /* Vertically centers the text */
-            box-sizing: border-box;
-        }
-        
-        /* Mobile fallback so it stacks cleanly on phones */
-        @media (max-width: 600px) {
-            .project-card {
-                flex-direction: column;
-            }
-            .project-image {
-                width: 100%;
-                height: 200px;
-            }
-            .project-title {
-                width: 100%;
-                padding: 1.5rem;
-                justify-content: center;
-            }
-        }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -80,54 +48,40 @@
         </div>
     </nav>
 
-    <!-- Project Hero Section (min-height removed, padding adjusted to shrink gap) -->
-    <section class="hero" style="padding: 4rem 1rem 1rem 1rem; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
             <h1>Thermal Fluid Systems Design</h1>
         </div>
     </section>
 
-    <!-- Overview (top padding reduced to pull it closer to the title) -->
+    <!-- Project Details Section -->
     <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; padding: 1rem 1rem 2rem 1rem;">
+        <!-- Wrapper to keep text readable and centered -->
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+
             <h2>The Big Picture</h2>
             <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications ranging from solar thermal energy storage to data center GPU server rack cooling loops. Evaluated thermodynamic and hydraulic trade-offs (balancing heat transfer effectiveness against pressure drop and pump power demands) while physically fabricating and testing a functional heat exchanger and cold plate to empirically validate theoretical models.</p>
-        </div>
-        
-        <!-- Project Selection List -->
-        <div class="project-list">
-            <a href="project4-sub1.html" class="project-card">
-                <img src="images/server-thumb.jpg" alt="Server Liquid Cooling" class="project-image">
-                <div class="project-title">Server Liquid Cooling System</div>
-            </a>
-            <a href="project4-sub2.html" class="project-card">
-                <img src="images/datacenter-thumb.jpg" alt="Data Center Cooling" class="project-image">
-                <div class="project-title">Data Center Rack Liquid Cooling System</div>
-            </a>
-            <a href="project4-sub3.html" class="project-card">
-                <img src="images/space-thumb.jpg" alt="Deep Space Probe" class="project-image">
-                <div class="project-title">Deep Space Probe Power System</div>
-            </a>
-            <a href="project4-sub4.html" class="project-card">
-                <img src="images/thermal-thumb.jpg" alt="Thermal Energy Storage" class="project-image">
-                <div class="project-title">Thermal Energy Storage</div>
-            </a>
-            <a href="project4-sub5.html" class="project-card">
-                <img src="images/HX4.png" alt="Mini Heat Exchanger" class="project-image">
-                <div class="project-title">Mini Heat Exchanger</div>
-            </a>
-        </div>
-    </section>
 
-                <!-- Back Button -->
+            <!-- Project Selection List -->
+            <div class="project-list">
+                <a href="project4-sub1.html" class="project-card">Server Liquid Cooling System</a>
+                <a href="project4-sub2.html" class="project-card">Data Center Rack Liquid Cooling System</a>
+                <a href="project4-sub3.html" class="project-card">Deep Space Probe Power System</a>
+                <a href="project4-sub4.html" class="project-card">Thermal Energy Storage</a>
+                <a href="project4-sub5.html" class="project-card">Mini Heat Exchanger</a>
+            </div>
+
+            <!-- Back Button -->
             <div style="margin-top: 4rem; text-align: center;">
                 <a href="index.html#projects" class="button button-outline">&larr; Back to Projects</a>
             </div>
 
         </div>
     </section>
+
     <!-- Footer -->
-    <footer style="text-align: center; padding: 2rem;">
+    <footer>
         <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
 
