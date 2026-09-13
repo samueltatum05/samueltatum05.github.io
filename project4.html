@@ -6,11 +6,11 @@
     <title>Thermal Fluid Systems Design | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px; /* Matches the text width */
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -23,27 +23,39 @@
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
-            flex-direction: column;
+            flex-direction: row; /* Puts image and text side-by-side */
+            align-items: center;
         }
         .project-card:hover {
-            transform: translateY(-5px);
+            transform: translateX(8px); /* Slides right slightly on hover */
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .project-image {
-            width: 100%;
-            height: 200px;
+            width: 200px;
+            height: 120px;
             object-fit: cover;
             background-color: #eee;
+            flex-shrink: 0; /* Prevents the image from squishing */
         }
         .project-title {
-            padding: 1.5rem;
-            font-size: 1.2rem;
+            padding: 1.5rem 2rem;
+            font-size: 1.25rem;
             font-weight: bold;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: left;
+        }
+        
+        /* Mobile fallback so it looks good on phones */
+        @media (max-width: 600px) {
+            .project-card {
+                flex-direction: column;
+            }
+            .project-image {
+                width: 100%;
+                height: 150px;
+            }
+            .project-title {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -71,15 +83,14 @@
 
     <!-- Overview -->
     <section class="section bg-light">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: center; padding: 2rem 1rem;">
+        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; padding: 2rem 1rem;">
             <h2>The Big Picture</h2>
             <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications ranging from solar thermal energy storage to data center GPU server rack cooling loops. Evaluated thermodynamic and hydraulic trade-offs (balancing heat transfer effectiveness against pressure drop and pump power demands) while physically fabricating and testing a functional heat exchanger and cold plate to empirically validate theoretical models.</p>
         </div>
         
-        <!-- Project Selection Grid -->
-        <div class="project-grid">
+        <!-- Project Selection List -->
+        <div class="project-list">
             <a href="project4-sub1.html" class="project-card">
-                <!-- Replace src with an actual thumbnail image from your project -->
                 <img src="images/server-thumb.jpg" alt="Server Liquid Cooling" class="project-image">
                 <div class="project-title">Server Liquid Cooling System</div>
             </a>
