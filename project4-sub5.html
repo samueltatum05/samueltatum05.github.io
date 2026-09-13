@@ -6,6 +6,21 @@
     <title>Mini Heat Exchanger | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        .pdf-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .pdf-wrapper {
+            flex: 1 1 calc(50% - 1rem);
+            min-width: 300px;
+        }
+        iframe {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
         .image-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -14,46 +29,69 @@
         }
         @media (max-width: 768px) {
             .image-grid {
-                grid-template-columns: 1fr; /* stacks on mobile */
+                grid-template-columns: 1fr;
             }
         }
-        .img-container { text-align: center; }
+        .img-container {
+            text-align: center;
+        }
         .img-container img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .caption { font-size: 0.9em; color: #666; margin-top: 0.5rem; }
-        iframe { border: 1px solid #ccc; border-radius: 8px; }
+        .caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navigation -->
     <nav>
-        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Sam Tatum</a></div>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">Sam Tatum</a>
+        </div>
         <div class="nav-links">
+            <a href="index.html#about">About</a>
             <a href="index.html#projects">Projects</a>
-            <a href="thermal-fluid-systems.html">Thermal Systems</a>
+            <a href="index.html#resume">Resume</a>
+            <a href="index.html#contact">Contact</a>
         </div>
     </nav>
 
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="hero-text">
+            <h1>Mini Heat Exchanger</h1>
+        </div>
+    </section>
+
+    <!-- Project Details Section -->
     <section class="section bg-light" style="padding: 4rem 1rem;">
-        <div style="max-width: 1000px; margin: 0 auto; line-height: 1.8;">
-            <h2 style="text-align: center;">Mini Heat Exchanger</h2>
+        <div style="max-width: 1200px; margin: 0 auto; line-height: 1.8;">
             
-            <div style="max-width: 800px; margin: 0 auto 2rem auto; text-align: center;">
-                <h3>The Big Picture</h3>
+            <!-- Wrapper to keep text readable and centered -->
+            <div style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <h2>Summary</h2>
                 <p>Transitioning from theoretical calculations to physical hardware, this project involved the end-to-end fabrication of a functional mini heat exchanger and cold plate. It required aluminum plate machining, precision tubing integration, and physical thermal testing to empirically validate the mathematical heat transfer models developed in the earlier stages.</p>
             </div>
 
-            <div style="max-width: 800px; margin: 0 auto 3rem auto;">
-                <iframe src="images/TFHX.pdf" width="100%" height="900px" title="Mini Heat Exchanger">
-                    <p>Your browser does not support PDFs. <a href="images/TFHX.pdf">Download the PDF</a>.</p>
-                </iframe>
+            <div class="pdf-grid">
+                <div class="pdf-wrapper" style="flex: 1 1 800px; max-width: 800px;">
+                    <iframe src="images/TFHX.pdf" width="100%" height="900px" title="Mini Heat Exchanger">
+                        <p>Your browser does not support PDFs. <a href="images/TFHX.pdf">Download the PDF</a>.</p>
+                    </iframe>
+                </div>
             </div>
-            
-            <h3 style="text-align: center; margin-top: 2rem;">Fabrication Gallery</h3>
-            
+
+            <!-- Fabrication Gallery -->
+            <div style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <h2 style="text-align: center;">Fabrication Gallery</h2>
+            </div>
             <div class="image-grid">
                 <div class="img-container">
                     <img src="images/HX1.png" alt="HX1">
@@ -73,13 +111,13 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin: 3rem auto; max-width: 800px;">
-                <h3 style="margin-bottom: 1rem;">Testing & Validation</h3>
+            <!-- Testing & Validation -->
+            <div style="max-width: 800px; margin: 3rem auto; text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">Testing &amp; Validation</h2>
                 <video src="images/HXC.mov" controls style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></video>
                 <p class="caption"><em>Video 1: Manufacturing and thermal testing.</em></p>
             </div>
-            
-            <!-- Back Button -->
+
             <div style="margin-top: 4rem; text-align: center;">
                 <a href="project4.html" class="button button-outline">&larr; Back to Thermal Systems Hub</a>
             </div>
