@@ -17,24 +17,41 @@
             flex: 1 1 calc(50% - 1rem);
             min-width: 300px;
         }
-        iframe { border: 1px solid #ccc; border-radius: 8px; }
+        iframe {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navigation -->
     <nav>
-        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Sam Tatum</a></div>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">Sam Tatum</a>
+        </div>
         <div class="nav-links">
+            <a href="index.html#about">About</a>
             <a href="index.html#projects">Projects</a>
-            <a href="thermal-fluid-systems.html">Thermal Systems</a>
+            <a href="index.html#resume">Resume</a>
+            <a href="index.html#contact">Contact</a>
         </div>
     </nav>
 
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="hero-text">
+            <h1>Data Center Rack Liquid Cooling System</h1>
+        </div>
+    </section>
+
+    <!-- Project Details Section -->
     <section class="section bg-light" style="padding: 4rem 1rem;">
         <div style="max-width: 1200px; margin: 0 auto; line-height: 1.8;">
-            <h2 style="text-align: center;">Data Center Rack Liquid Cooling System</h2>
             
-            <div style="max-width: 800px; margin: 0 auto 2rem auto; text-align: center;">
-                <h3>The Big Picture</h3>
+            <!-- Wrapper to keep text readable and centered -->
+            <div style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <h2>Summary</h2>
                 <p>Scaling up from individual server constraints, this macro-level project addresses the thermal demands of a fully populated GPU server rack. The focus was on designing supply and return manifolds, optimizing facility-level coolant flow distribution, and minimizing overall energy consumption (PUE) by mapping out system-level thermal resistance networks.</p>
             </div>
 
