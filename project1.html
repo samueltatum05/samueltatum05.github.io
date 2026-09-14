@@ -4,8 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massive Project Title | Sam Tatum</title>
+    <title>Villanova Engineering Service Learning | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            max-width: 650px;
+            margin: 2rem auto 0 auto;
+        }
+        .project-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 1.25rem 1.75rem;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-align: left;
+        }
+        .project-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .project-card-image {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.75rem;
+            font-weight: normal;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .project-card-title {
+            flex: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,91 +72,49 @@
     <!-- Project Hero Section -->
     <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <h1>Massive Project Title</h1>
-            <h2>Semester-long international engineering deployments across Africa and South America, focusing on the end-to-end design, manufacturing, 
-                            field testing, and maintenance of sustainable technical systems. Combined hands-on mechanical 
-                            fabrication, geospatial analysis (ArcGIS), and electromechanical integration to deliver high-impact engineering
-                            solutions to underserved communities.</h2>
+            <h1>Villanova Engineering Service Learning</h1>
         </div>
     </section>
 
-    <!-- Main Project Details -->
+    <!-- Project Details Section -->
     <section class="section bg-light">
+        <!-- Wrapper to keep text readable and centered -->
         <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            
-            <img src="images/project1-main.jpg" alt="Main Project Overview" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
 
             <h2>The Big Picture</h2>
-            <p>Describe the overarching goal of this massive project. What was the massive system you built, and why was it broken down into sub-components?</p>
+            <p>Semester-long international engineering deployments across Africa and South America, focusing on the end-to-end design, manufacturing, field testing, and maintenance of sustainable technical systems. Combined hands-on mechanical fabrication, geospatial analysis (ArcGIS), and electromechanical integration to deliver high-impact engineering solutions to underserved communities.</p>
 
-        </div>
-    </section>
-
-    <!-- Sub-Projects Section -->
-    <section class="section">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="text-align: center;">System Components (Sub-Projects)</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Click on a component below to see the detailed engineering breakdown.</p>
-            
-            <!-- Using your existing CSS grid for the sub-projects -->
-            <div class="projects">
-
-                <!-- Sub-Project 1 -->
-                <a href="project1-sub1.html" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <img src="images/sub1-thumbnail.jpg" alt="Sub-Project 1" class="project-image">
-                        <div class="project-content">
-                            <h3>Subsystem 1: Chassis</h3>
-                            <p>Detailed view of the structural design and FEA testing.</p>
-                        </div>
-                    </div>
+            <!-- Project Selection List -->
+            <div class="project-list">
+                <a href="project1-sub1.html" class="project-card">
+                    <div class="project-card-image">Image<br>Placeholder</div>
+                    <div class="project-card-title">Ghana Project: Water Systems &amp; Geospatial Engineering</div>
                 </a>
-
-                <!-- Sub-Project 2 -->
-                <a href="project1-sub2.html" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <img src="images/sub2-thumbnail.jpg" alt="Sub-Project 2" class="project-image">
-                        <div class="project-content">
-                            <h3>Subsystem 2: Drivetrain</h3>
-                            <p>Breakdown of the motor selection, gearing, and machining.</p>
-                        </div>
-                    </div>
+                <a href="project1-sub2.html" class="project-card">
+                    <div class="project-card-image">Image<br>Placeholder</div>
+                    <div class="project-card-title">Peru Project: Sustainable Energy Engineering</div>
                 </a>
-
-                <!-- Sub-Project 3 -->
-                <a href="project1-sub3.html" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <img src="images/sub3-thumbnail.jpg" alt="Sub-Project 3" class="project-image">
-                        <div class="project-content">
-                            <h3>Subsystem 3: Thermal Management</h3>
-                            <p>Analysis of heat dissipation and cooling loops.</p>
-                        </div>
-                    </div>
+                <a href="project1-sub3.html" class="project-card">
+                    <div class="project-card-image">Image<br>Placeholder</div>
+                    <div class="project-card-title">Ecuador Project: STEM Education &amp; Robotics Engineering</div>
                 </a>
-
-                <!-- Sub-Project 4 -->
-                <a href="project1-sub4.html" style="text-decoration: none; color: inherit;">
-                    <div class="project-card">
-                        <img src="images/sub4-thumbnail.jpg" alt="Sub-Project 4" class="project-image">
-                        <div class="project-content">
-                            <h3>Subsystem 4: Controls</h3>
-                            <p>Overview of the sensors, wiring, and logic implementation.</p>
-                        </div>
-                    </div>
+                <a href="project1-sub4.html" class="project-card">
+                    <div class="project-card-image">Image<br>Placeholder</div>
+                    <div class="project-card-title">Kenya Project: Community Development &amp; Civil Engineering</div>
                 </a>
-
             </div>
-            
-            <!-- Back to Home Button -->
+
+            <!-- Back Button -->
             <div style="margin-top: 4rem; text-align: center;">
-                <a href="index.html#projects" class="button button-outline">&larr; Back to Main Portfolio</a>
+                <a href="index.html#projects" class="button button-outline">&larr; Back to Projects</a>
             </div>
 
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Sam Tatum | Mechanical Engineer</p>
+        <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
 
 </body>
