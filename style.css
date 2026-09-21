@@ -255,19 +255,21 @@ h1 {
 .resume-container {
     margin-top: 30px;
     border-radius: 12px;
-    overflow: auto; /* Allows scrolling if necessary */
-    -webkit-overflow-scrolling: touch; /* Forces smooth scrolling on iOS */
+    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid #e2e8f0;
     width: 100%;
-    height: 800px; /* Explicit desktop height */
+    max-width: 900px;
+    aspect-ratio: 8.5 / 11; /* matches a standard US letter page ratio */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resume-container iframe {
     display: block;
     border: none;
     width: 100%;
-    height: 100%; /* Forces iframe to respect the container's 800px height */
+    height: 100%;
 }
 
 /* --- Contact & Footer --- */
@@ -361,10 +363,6 @@ footer {
 
     .section {
         padding: 60px 8%;
-    }
-
-    .resume-container {
-        height: 550px; /* Adjusts overall container height for phones */
     }
 
     footer {
