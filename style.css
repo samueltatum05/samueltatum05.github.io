@@ -258,13 +258,13 @@ h1 {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid #e2e8f0;
-    width: 100%; /* Ensures container stays within bounds */
+    width: 100%;
 }
 
 iframe {
     display: block;
     border: none;
-    width: 100%; /* Ensures iframe fills container but doesn't overflow */
+    width: 100%;
 }
 
 /* --- Contact & Footer --- */
@@ -279,8 +279,8 @@ iframe {
 }
 
 footer {
-    text-align: center;
-    padding: 30px;
+    text-align: left;
+    padding: 30px 10%;
     background-color: var(--primary-color);
     color: #94a3b8;
 }
@@ -291,14 +291,14 @@ footer {
 @media (max-width: 900px) {
     .hero {
         flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
         padding-top: 60px;
         padding-bottom: 60px;
     }
 
     .hero-text {
-        align-items: center;
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
     }
@@ -308,16 +308,16 @@ footer {
     }
 
     .section h2::after {
-        margin: 10px auto;
+        margin: 10px 0 0 0; /* Kept left-aligned */
     }
 
     .section {
-        text-align: center;
+        text-align: left;
     }
 
     .section p {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .project-card {
@@ -340,6 +340,7 @@ footer {
 @media (max-width: 700px) {
     nav {
         flex-direction: column;
+        align-items: flex-start; /* Left aligns logo */
         gap: 15px;
         padding: 20px 5%;
     }
@@ -347,11 +348,12 @@ footer {
     .nav-links {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start; /* Left aligns links */
+        gap: 15px;
     }
 
     .nav-links a {
-        margin: 5px 12px;
+        margin: 0;
     }
 
     .section {
@@ -361,11 +363,14 @@ footer {
     .resume-container iframe {
         height: 400px;
     }
+
+    footer {
+        padding: 30px 8%;
+    }
 }
 
-/* Small Phones (NEW additions for perfect mobile viewing) */
+/* Small Phones */
 @media (max-width: 600px) {
-    /* Prevent horizontal overflow by shrinking side padding */
     nav {
         padding: 15px 5%;
     }
@@ -378,7 +383,6 @@ footer {
         padding: 60px 5%;
     }
 
-    /* Scale down giant desktop headers so they don't break awkwardly */
     h1 {
         font-size: 38px;
     }
@@ -387,12 +391,15 @@ footer {
         font-size: 30px;
     }
 
-    /* Make buttons stack nicely on very narrow screens */
     .button {
         display: block;
         width: 100%;
         margin-right: 0;
         margin-bottom: 15px;
         text-align: center;
+    }
+
+    footer {
+        padding: 30px 5%;
     }
 }
