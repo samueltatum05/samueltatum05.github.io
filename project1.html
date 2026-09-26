@@ -11,23 +11,23 @@
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
-            max-width: 650px;
+            max-width: 700px; /* Widened slightly to accommodate landscape images */
             margin: 2rem auto 0 auto;
         }
         .project-card {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
             text-decoration: none;
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
-            padding: 1.25rem 1.75rem;
             font-size: 1.15rem;
             font-weight: bold;
             text-align: left;
+            overflow: hidden; /* Crucial: Clips the image to the card's rounded corners */
+            padding: 0; /* Removes outer margin around the image */
         }
         .project-card:hover {
             transform: translateX(8px);
@@ -35,14 +35,15 @@
         }
         .project-card-image {
             flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
+            width: 200px; /* Wider landscape format */
+            align-self: stretch; /* Forces image to span from top to bottom of the card */
             background: #e0e0e0;
             object-fit: cover; /* Prevents the photos from stretching */
         }
-        .project-card-title {
+        .project-content {
+            padding: 1.25rem 1.75rem; /* Moves padding here so text has breathing room */
             flex: 1;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -78,34 +79,44 @@
             <p>Semester-long international engineering projects deployed across Africa and South America, focusing on end-to-end design, manufacturing, field testing, and maintenance of sustainable technical systems. Combined hands-on mechanical fabrication, geospatial analysis (ArcGIS), and electromechanical integration to deliver high-impact engineering solutions to underserved communities.</p>
 
             <!-- Project Selection List -->
-            <!-- Project 1 -->
-            <a href="project1-sub1.html" class="project-link">
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/GhanaM.JPG" alt="Ghana Project" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3>Ghana Project: Water Systems &amp; Geospatial Engineering</h3>
-                        </div>
-                </div>
-            </a>
             <div class="project-list">
+                
+                <!-- Ghana Project -->
                 <a href="project1-sub1.html" class="project-card">
                     <img src="images/GhanaM.JPG" alt="Ghana Project" class="project-card-image">
-                    <div class="project-card-title">Ghana Project: Water Systems &amp; Geospatial Engineering</div>
+                    <div class="project-content">
+                        Ghana Project:<br>
+                        <span style="font-weight: normal;">Water Systems &amp; Geospatial Engineering</span>
+                    </div>
                 </a>
+
+                <!-- Peru Project -->
                 <a href="project1-sub2.html" class="project-card">
                     <img src="images/PeruM.JPG" alt="Peru Project" class="project-card-image">
-                    <div class="project-card-title">Peru Project: Sustainable Energy Engineering</div>
+                    <div class="project-content">
+                        Peru Project:<br>
+                        <span style="font-weight: normal;">Sustainable Energy Engineering</span>
+                    </div>
                 </a>
+
+                <!-- Ecuador Project -->
                 <a href="project1-sub3.html" class="project-card">
                     <img src="images/GalM.JPG" alt="Ecuador Project" class="project-card-image">
-                    <div class="project-card-title">Ecuador Project: STEM Education &amp; Robotics Engineering</div>
+                    <div class="project-content">
+                        Ecuador Project:<br>
+                        <span style="font-weight: normal;">STEM Education &amp; Robotics Engineering</span>
+                    </div>
                 </a>
+
+                <!-- Kenya Project -->
                 <a href="project1-sub4.html" class="project-card">
                     <img src="images/KenyaM.JPG" alt="Kenya Project" class="project-card-image">
-                    <div class="project-card-title">Kenya Project: Community Development &amp; Civil Engineering</div>
+                    <div class="project-content">
+                        Kenya Project:<br>
+                        <span style="font-weight: normal;">Community Development &amp; Civil Engineering</span>
+                    </div>
                 </a>
+                
             </div>
 
             <!-- Back Button -->
