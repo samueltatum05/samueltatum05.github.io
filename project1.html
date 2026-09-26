@@ -10,24 +10,25 @@
         .project-list {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
-            max-width: 700px; /* Widened slightly to accommodate landscape images */
+            gap: 1.5rem; /* Increased gap for larger cards */
+            max-width: 800px; /* Widened to make the cards larger overall */
             margin: 2rem auto 0 auto;
         }
         .project-card {
             display: flex;
-            align-items: center;
+            align-items: stretch; /* Ensures children fill the height */
+            height: 150px; /* Forces uniform thickness for all cards */
             background: #fff;
             border: 1px solid #ddd;
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
             color: inherit;
             transition: transform 0.2s, box-shadow 0.2s;
-            font-size: 1.15rem;
+            font-size: 1.3rem; /* Increased font size */
             font-weight: bold;
             text-align: left;
-            overflow: hidden; /* Crucial: Clips the image to the card's rounded corners */
-            padding: 0; /* Removes outer margin around the image */
+            overflow: hidden; 
+            padding: 0; 
         }
         .project-card:hover {
             transform: translateX(8px);
@@ -35,15 +36,17 @@
         }
         .project-card-image {
             flex-shrink: 0;
-            width: 200px; /* Wider landscape format */
-            align-self: stretch; /* Forces image to span from top to bottom of the card */
+            width: 250px; /* Wider image to match larger card */
             background: #e0e0e0;
-            object-fit: cover; /* Prevents the photos from stretching */
+            object-fit: cover;
         }
         .project-content {
-            padding: 1.25rem 1.75rem; /* Moves padding here so text has breathing room */
+            padding: 0 2rem; /* Adjusted padding */
             flex: 1;
             line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Perfectly centers text vertically within the fixed height */
         }
     </style>
 </head>
@@ -86,7 +89,7 @@
                     <img src="images/GhanaM.JPG" alt="Ghana Project" class="project-card-image">
                     <div class="project-content">
                         Ghana Project:<br>
-                        <span style="font-weight: normal;">Water Systems &amp; Geospatial Engineering</span>
+                        <span style="font-weight: normal;">Geospatial Engineering &amp; Water Systems</span>
                     </div>
                 </a>
 
@@ -104,7 +107,7 @@
                     <img src="images/GalM.JPG" alt="Ecuador Project" class="project-card-image">
                     <div class="project-content">
                         Ecuador Project:<br>
-                        <span style="font-weight: normal;">STEM Education &amp; Robotics Engineering</span>
+                        <span style="font-weight: normal;">Robotics Engineering &amp; STEM Education</span>
                     </div>
                 </a>
 
@@ -113,7 +116,7 @@
                     <img src="images/KenyaM.JPG" alt="Kenya Project" class="project-card-image">
                     <div class="project-content">
                         Kenya Project:<br>
-                        <span style="font-weight: normal;">Community Development &amp; Civil Engineering</span>
+                        <span style="font-weight: normal;">Civil Engineering &amp; Community Development</span>
                     </div>
                 </a>
                 
