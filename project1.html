@@ -48,6 +48,23 @@
             flex-direction: column;
             justify-content: center; /* Perfectly centers text vertically within the fixed height */
         }
+        /* --- Mobile Responsiveness Fix --- */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column; /* Stacks the image on top of the text */
+        height: auto; /* Removes the fixed 150px height so text can wrap naturally */
+    }
+    
+    .project-card-image {
+        width: 100%; /* Makes the image take up the full width of the card */
+        height: 180px; /* Gives the image a nice fixed height on mobile */
+    }
+    
+    .project-content {
+        padding: 1.5rem; /* Adjusts padding so it looks balanced vertically */
+        text-align: center; /* Centers the text nicely on a phone screen */
+    }
+}
     </style>
 </head>
 
