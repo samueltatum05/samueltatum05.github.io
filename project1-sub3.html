@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subsystem 1 | Sam Tatum</title>
+    <title>Peru Project | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .img-container {
+            text-align: center;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -23,40 +48,110 @@
         </div>
     </nav>
 
-    <!-- Sub-Project Hero Section -->
-    <section class="hero" style="min-height: 30vh; display: flex; align-items: center; justify-content: center; text-align: center; background-color: #f4f4f4;">
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: #666;">Part of: Massive Project Title</p>
-            <h1>Subsystem 1: Chassis</h1>
+            <h1>Peru Project: Sustainable Energy Engineering</h1>
         </div>
     </section>
 
-    <!-- Sub-Project Details -->
-    <section class="section">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            
-            <img src="images/sub1-detail.jpg" alt="Subsystem Detail" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
+    <!-- Project Details Section -->
+    <section class="section bg-light" style="padding: 4rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto; line-height: 1.8;">
 
-            <h2>Design Requirements</h2>
-            <p>What were the specific constraints for just this subsystem? Weight limits, material requirements, or spatial boundaries?</p>
-
-            <h2>Engineering Process</h2>
-            <p>Walk through the CAD iteration, testing, or manufacturing steps for this specific component.</p>
-            
-            <h2>Integration</h2>
-            <p>How did this component successfully connect back to the massive overarching project?</p>
-            
-            <!-- Back to Main Project Button -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <a href="project1.html" class="button button-outline">&larr; Back to Main Project</a>
+            <!-- Wrapper to keep text readable and centered -->
+            <div style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <h2>Summary</h2>
+                <p>As a volunteer with the WindAid Institute in Trujillo, Peru (September&ndash;December 2024), I helped build and deploy a small-scale wind energy system from raw materials to a working installation. The fabrication work included manufacturing fiberglass composite wind turbine blades and welding a structural steel tower, along with building and installing a wooden electrical enclosure that integrates a DC-DC buck converter to regulate the turbine&rsquo;s 12V output down to 5V, producing usable electricity for lightbulbs and phone chargers. Once a 15-ft wind turbine was installed in the Andes, I collected and analyzed anemometer data to assess the site&rsquo;s wind performance.</p>
             </div>
 
+            <!-- Fabrication Gallery -->
+            <div style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <h2 style="text-align: center;">Fabrication Gallery</h2>
+            </div>
+            <div class="image-grid">
+                <div class="img-container">
+                    <img src="images/Peru_18.jpg" alt="Team photo during the pre-field debrief" loading="lazy">
+                    <p class="caption"><em>Figure 1: Team photo during the pre-field debrief.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_9.jpg" alt="Open wind turbine blade mould" loading="lazy">
+                    <p class="caption"><em>Figure 2: The turbine blade mould, opened up and ready for preparation.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_10.jpg" alt="Mould lined with plastic wrap" loading="lazy">
+                    <p class="caption"><em>Figure 3: Wrapping the inside of the mould in plastic wrap so the expanding foam doesn&rsquo;t permanently stick to it and ruin the mould.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_11.jpg" alt="Cutting fiberglass sheet" loading="lazy">
+                    <p class="caption"><em>Figure 4: Cutting the fiberglass sheet to fit the mould.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_12.jpg" alt="Fiberglass sheet laid into the mould" loading="lazy">
+                    <p class="caption"><em>Figure 5: Laying the fiberglass sheet onto the plastic-wrapped mould, bonded in place with glue.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_13.jpg" alt="Pouring expanding foam into the closed mould" loading="lazy">
+                    <p class="caption"><em>Figure 6: Pouring expanding foam into the closed mould.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_14.jpg" alt="Closed mould while the foam sets" loading="lazy">
+                    <p class="caption"><em>Figure 7: Waiting for the foam to expand and set inside the mould.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_15.jpg" alt="Welding a turbine base bracket" loading="lazy">
+                    <p class="caption"><em>Figure 8: Welding a bracket for the base of the wind turbine.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_1.jpg" alt="Final electrical panel fabricated in the shop" loading="lazy">
+                    <p class="caption"><em>Figure 9: The final electrical panel, fabricated in the shop with a switch, a DC-DC voltage converter for a phone charger, and a solar/wind hybrid battery controller.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_16.jpg" alt="Field team photo" loading="lazy">
+                    <p class="caption"><em>Figure 10: Field team photo.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_17.jpg" alt="Sam Tatum in the field in the Andes" loading="lazy">
+                    <p class="caption"><em>Figure 11: In the field.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_5.jpg" alt="Wind turbine installed at the house" loading="lazy">
+                    <p class="caption"><em>Figure 12: The wind turbine installed at the house, using the blade and base bracket fabricated in the earlier steps.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_7.jpg" alt="Solar panel after installation" loading="lazy">
+                    <p class="caption"><em>Figure 13: Solar panel after installation.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_6.jpg" alt="Wires from the roof solar panel" loading="lazy">
+                    <p class="caption"><em>Figure 14: Wires run from the roof-mounted solar panel to the electrical cabinet.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_2.jpg" alt="Electrical panel installed in a rural house" loading="lazy">
+                    <p class="caption"><em>Figure 15: The electrical panel installed in a rural house in the Andes.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_4.jpg" alt="Close-up of the wind and solar hybrid battery controller" loading="lazy">
+                    <p class="caption"><em>Figure 16: Close-up of the wind/solar hybrid battery controller and its digital display.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_3.jpg" alt="Homeowner charging his phone from the panel" loading="lazy">
+                    <p class="caption"><em>Figure 17: The homeowner with the panel, showing it charge his phone.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Peru_8.jpg" alt="Collecting wind data from the anemometer" loading="lazy">
+                    <p class="caption"><em>Figure 18: Collecting wind turbine data via the anemometer.</em></p>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="project1.html" class="button button-outline">&larr; Back to Service Learning Hub</a>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Sam Tatum | Mechanical Engineer</p>
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
-
 </body>
 </html>
