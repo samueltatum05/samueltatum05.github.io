@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subsystem 1 | Sam Tatum</title>
+    <title>Ecuador Project | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+        .pdf-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .pdf-wrapper {
+            flex: 1 1 calc(50% - 1rem);
+            min-width: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            aspect-ratio: 8.5 / 11;
+        }
+        .pdf-wrapper iframe {
+            display: block;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .img-container {
+            text-align: center;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .video-block {
+            margin-bottom: 3rem;
+        }
+        .video-block video {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -23,40 +79,101 @@
         </div>
     </nav>
 
-    <!-- Sub-Project Hero Section -->
-    <section class="hero" style="min-height: 30vh; display: flex; align-items: center; justify-content: center; text-align: center; background-color: #f4f4f4;">
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: #666;">Part of: Massive Project Title</p>
-            <h1>Subsystem 1: Chassis</h1>
+            <h1>Ecuador Project: Robotics Engineering &amp; STEM Education</h1>
         </div>
     </section>
 
-    <!-- Sub-Project Details -->
-    <section class="section">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            
-            <img src="images/sub1-detail.jpg" alt="Subsystem Detail" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
+    <!-- Project Details Section -->
+    <section class="section bg-light" style="padding: 4rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto; line-height: 1.8;">
 
-            <h2>Design Requirements</h2>
-            <p>What were the specific constraints for just this subsystem? Weight limits, material requirements, or spatial boundaries?</p>
-
-            <h2>Engineering Process</h2>
-            <p>Walk through the CAD iteration, testing, or manufacturing steps for this specific component.</p>
-            
-            <h2>Integration</h2>
-            <p>How did this component successfully connect back to the massive overarching project?</p>
-            
-            <!-- Back to Main Project Button -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <a href="project1.html" class="button button-outline">&larr; Back to Main Project</a>
+            <!-- Wrapper to keep text readable and centered -->
+            <div style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <h2>Summary</h2>
+                <p>From September to December 2025, I volunteered with Fundaci&oacute;n Un Cambio por la Vida on Santa Cruz Island in the Gal&aacute;pagos, Ecuador, as part of Villanova Engineering Service Learning. The goal was to bring hands-on robotics education to local high school students who did not have adequate access to STEM education. Using LEGO Mindstorms kits, we taught fundamental programming and electromechanical systems concepts through a five-day robotics course.</p>
+                <p>Before traveling, the team and I formulated and updated the educational workshop material, including slide shows with step-by-step directions for assembling and programming each robot. We also organized six complete LEGO Mindstorms kits to bring with us and donate to the high school for future educational use.</p>
+                <p>On Santa Cruz, we ran two classes each day for five days, one for younger students and one for older students, with both groups working through the same projects at different times of day. A fluent Spanish speaker from ESPOL led the main instruction, going over the slides and explaining each topic in depth, while the rest of the team, myself included, walked around the classroom helping students with any difficulty building or programming their robots. Over the week, students built a line-following robot using a color sensor, a robotic arm with three axes of control, and an ultrasonic radar system. At the end of the week, they used those skills to create their own group robots aimed at helping solve local problems in the Gal&aacute;pagos, and presented their projects to the local community in the town center. I also co-organized and hosted a robotics showcase for 250+ attendees, increasing local receptivity to STEM education.</p>
+                <p>The course materials are included below. The syllabus, which was sent to students taking the course and used by us as instructors, outlines the five-day schedule: an introduction to LEGO Mindstorms, block programming, and sensors on day one, followed by the line follower, robot arm, and radar projects, and group project time on the final day. The course book is the robotics STEM lab book we compiled for the students, with photo-by-photo build instructions and the related block-code instructions for the LEGO Mindstorms NXT projects (the robot arm, dolphin, and line follower, among others). All of these labs were found publicly on the LEGO NXT projects site; our contribution was compiling and organizing them into a single PDF of instructions.</p>
             </div>
 
+            <!-- Course Materials (PDFs) -->
+            <div class="pdf-grid">
+                <div class="pdf-wrapper">
+                    <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/samueltatum05/samueltatum05.github.io/main/images/Ecuador_Syllabus.pdf&embedded=true" title="Introductory Robotics Syllabus">
+                        <p>Your browser does not support PDFs. <a href="images/Ecuador_Syllabus.pdf">Download the PDF</a>.</p>
+                    </iframe>
+                </div>
+                <div class="pdf-wrapper">
+                    <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/samueltatum05/samueltatum05.github.io/main/images/Ecuador_Coursebook.pdf&embedded=true" title="Introductory Robotics Course Book (with slides)">
+                        <p>Your browser does not support PDFs. <a href="images/Ecuador_Coursebook.pdf">Download the PDF</a>.</p>
+                    </iframe>
+                </div>
+            </div>
+            <p class="caption" style="text-align: center; margin-top: 1rem;"><em>Left: Introductory Robotics Syllabus. Right: Introductory Robotics Course Book (with slides).</em></p>
+
+            <!-- Photo Gallery -->
+            <div style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <h2 style="text-align: center;">Photo Gallery</h2>
+            </div>
+            <div class="image-grid">
+                <div class="img-container">
+                    <img src="images/Ecuador_2.jpg" alt="The class playing with their line-following robots" loading="lazy">
+                    <p class="caption"><em>Figure 1: The class playing with their line-following robots.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ecuador_3.jpg" alt="The class playing with their robotic arm" loading="lazy">
+                    <p class="caption"><em>Figure 2: The class playing with their robotic arm.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ecuador_4.jpg" alt="Students demoing their robots to the local community" loading="lazy">
+                    <p class="caption"><em>Figure 3: Students demoing their robots to the local community and educating the public about the STEM they learned.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ecuador_1.jpg" alt="Team photo with the students at the course graduation ceremony" loading="lazy">
+                    <p class="caption"><em>Figure 4: Team photo with the students at the course graduation ceremony.</em></p>
+                </div>
+            </div>
+
+            <!-- Robot Testing Videos -->
+            <div style="max-width: 800px; margin: 3rem auto; text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">Robot Testing</h2>
+
+                <div class="video-block">
+                    <video controls preload="metadata">
+                        <source src="images/Ecuador_LineFollower.mp4" type="video/mp4">
+                        <source src="images/Ecuador_LineFollower.mov" type="video/quicktime">
+                        Your browser does not support embedded video.
+                    </video>
+                    <p class="caption"><em>Video 1: Students testing their line-following robots&rsquo; capabilities on a paper track.</em></p>
+                </div>
+
+                <div class="video-block">
+                    <video controls preload="metadata">
+                        <source src="images/Ecuador_RobotArm.mp4" type="video/mp4">
+                        <source src="images/Ecuador_RobotArm.mov" type="video/quicktime">
+                        Your browser does not support embedded video.
+                    </video>
+                    <p class="caption"><em>Video 2: Students testing the functionality of their robot arm by picking up a ball with it.</em></p>
+                </div>
+            </div>
+
+            <!-- Reflection -->
+            <div style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <h2>Reflection</h2>
+                <p>I had taught robotics workshops very similar to this one in my hometown, but never in a foreign country, and my main concern going in was whether a language barrier would keep me from being effective. In the field the barrier was much smaller than I expected: I am not fluent in Spanish, but I could communicate, and I could see students understand concepts as I explained them in my broken Spanish. It showed me that education is universal. The most meaningful moment of the week was the community show-and-tell, where the students became leaders and found the courage to teach their peers about STEM and how it can be used to improve their community. I hope the work inspired some of them to pursue STEM in the future.</p>
+            </div>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="project1.html" class="button button-outline">&larr; Back to Service Learning Hub</a>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Sam Tatum | Mechanical Engineer</p>
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
-
 </body>
 </html>

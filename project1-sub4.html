@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subsystem 1 | Sam Tatum</title>
+    <title>Kenya Project | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+        .sub-heading {
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+        .storymap-card {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .storymap-card h2 {
+            margin-bottom: 1rem;
+        }
+        .storymap-card p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .storymap-card .button {
+            margin-right: 0;
+        }
+        .storymap-note {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -23,40 +54,61 @@
         </div>
     </nav>
 
-    <!-- Sub-Project Hero Section -->
-    <section class="hero" style="min-height: 30vh; display: flex; align-items: center; justify-content: center; text-align: center; background-color: #f4f4f4;">
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: #666;">Part of: Massive Project Title</p>
-            <h1>Subsystem 1: Chassis</h1>
+            <h1>Kenya Project: Civil Engineering &amp; Community Development</h1>
         </div>
     </section>
 
-    <!-- Sub-Project Details -->
-    <section class="section">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            
-            <img src="images/sub1-detail.jpg" alt="Subsystem Detail" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
+    <!-- Project Details Section -->
+    <section class="section bg-light" style="padding: 4rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto; line-height: 1.8;">
 
-            <h2>Design Requirements</h2>
-            <p>What were the specific constraints for just this subsystem? Weight limits, material requirements, or spatial boundaries?</p>
-
-            <h2>Engineering Process</h2>
-            <p>Walk through the CAD iteration, testing, or manufacturing steps for this specific component.</p>
-            
-            <h2>Integration</h2>
-            <p>How did this component successfully connect back to the massive overarching project?</p>
-            
-            <!-- Back to Main Project Button -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <a href="project1.html" class="button button-outline">&larr; Back to Main Project</a>
+            <!-- Wrapper to keep text readable and centered -->
+            <div style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <h2>Summary</h2>
+                <p>From January to May 2026, I volunteered in Siaya, Kenya, with Villanova Engineering Service Learning, working with Start With One Kenya and Uzima Water Filters. The main focus of our team was supporting local infrastructure development by surveying sites for pit latrine systems and a borehole-fed water tower at a primary school, in communities with limited access to sanitation and clean water. Alongside the survey work, we distributed household water filters, led hands-on STEM activities at the Nina School for the Deaf, and hosted an entrepreneurship workshop for students at Siaya National Polytechnic Institute.</p>
             </div>
 
+            <!-- StoryMap Link -->
+            <div class="storymap-card">
+                <h2>Explore the Story Map</h2>
+                <p>I documented this experience in an interactive ArcGIS StoryMap. Click the button below to open the StoryMap and explore the experience in more depth.</p>
+                <a href="https://arcg.is/1XzC0L2" class="button" target="_blank" rel="noopener noreferrer">View the Kenya StoryMap &rarr;</a>
+                <p class="storymap-note">Opens in a new tab.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+
+                <h3 class="sub-heading">Preparing for the Field</h3>
+                <p>Before traveling, the team and I reviewed surveying techniques, practiced with the equipment, and organized the tools we would need, including measuring tapes, GPS devices, and an Abney level for collecting accurate site data. We also worked with local partners to understand the project goals and how our data would be used to design sustainable sanitation and water solutions for the community. Travel itself was part of the challenge: our flight was turned around when airspace over the Middle East closed, and we ended up traveling about 30 hours by plane followed by a full day by car to reach Siaya. Every team member agreed to persevere, and I am glad we did.</p>
+
+                <h3 class="sub-heading">Surveying for Latrines and a Water Tower</h3>
+                <p>The engineering core of the trip was surveying. Using an Abney level and handheld GPS units, we measured land elevations, marked boundaries, and mapped GPS landmarks to inform the placement of the new pit latrine systems and a borehole-fed water tower at Siaya Primary School. The school sits at the top of a hill with its borehole at the bottom, so the elevation data was essential for planning how water would be pumped uphill. We worked in teams, constantly bouncing ideas off each other to overcome the geographical challenges, and we relied on community members who guided us through the terrain and shared what their villages needed. On our first day we also evaluated and measured the existing pit latrines at a local school and noticed that even the infrastructure our new design was modeled after had an issue to address: latrine ventilation.</p>
+
+                <h3 class="sub-heading">Water Filter Distribution with Uzima</h3>
+                <p>In partnership with Uzima, we distributed household water filters to mothers who needed a clean household water supply. We led live demonstrations on how to use the filters and how to clean and maintain them properly, emphasized good sanitation practices such as washing hands before handling a filter, and talked with families about how they planned to use the filters and what difference they might make in their daily lives. We collected information through questionnaires along the way, and were welcomed by a group of singing mothers with a traditional Luo song.</p>
+
+                <h3 class="sub-heading">STEM at the Nina School for the Deaf</h3>
+                <p>At the Nina School for the Deaf, we got to know the students using basic sign language and notepads, and they taught us sign language in return. Together we completed two hands-on activities: building towers out of spaghetti and marshmallows, and constructing a simple water filter from a plastic bottle and sand. We also looked at the condition of the students&rsquo; dormitories and developed a plan to reinforce a termite-infested ceiling.</p>
+
+                <h3 class="sub-heading">Entrepreneurship Workshop</h3>
+                <p>At Siaya National Polytechnic Institute, we presented the fundamentals of business model development to students and organized a Shark Tank-inspired competition in which they pitched their own business ideas.</p>
+
+                <h3 class="sub-heading">Reflection</h3>
+                <p>Professionally, this experience expanded my ability to apply engineering concepts in a practical setting. I gained hands-on experience surveying land elevations and mapping GPS coordinates to support civil engineering plans, and a better understanding of how infrastructure projects are carried out in resource-limited, international contexts and where there is room for improvement. I also learned the value of leading through action and the importance of humility: meaningful collaboration requires listening to and valuing input from everyone, regardless of their level of technical experience.</p>
+                <p>Personally, I developed a deeper sense of patience, and I learned to pause, listen, and understand people before rushing into action. I was reminded of how fortunate I am, and that impact is not always measured by how much you can solve, but often by how you make others feel. The gratitude and joy of the people I met also deepened my faith and challenged me to approach my own life with more thankfulness. While this was not my first VESL experience, it may have been the most transformative. If I helped make someone&rsquo;s life even 1% better, I consider the effort a success.</p>
+            </div>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="project1.html" class="button button-outline">&larr; Back to Service Learning Hub</a>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Sam Tatum | Mechanical Engineer</p>
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
-
 </body>
 </html>

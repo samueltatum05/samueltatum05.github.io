@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subsystem 1 | Sam Tatum</title>
+    <title>Ghana Project | Sam Tatum</title>
     <link rel="stylesheet" href="style.css">
+        <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .img-container {
+            text-align: center;
+        }
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        /* Full-row figure (used for the ArcGIS map) and a centered lone figure */
+        .img-container.wide {
+            grid-column: 1 / -1;
+        }
+        .img-container.wide img {
+            max-width: 800px;
+            width: 100%;
+        }
+        .img-container.solo {
+            grid-column: 1 / -1;
+            justify-self: center;
+            max-width: calc(50% - 1rem);
+        }
+        @media (max-width: 768px) {
+            .img-container.solo {
+                max-width: 100%;
+            }
+        }
+        .caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .video-block {
+            margin-bottom: 3rem;
+        }
+        .video-block video {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .sub-heading {
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+    </style>
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -23,40 +80,133 @@
         </div>
     </nav>
 
-    <!-- Sub-Project Hero Section -->
-    <section class="hero" style="min-height: 30vh; display: flex; align-items: center; justify-content: center; text-align: center; background-color: #f4f4f4;">
+    <!-- Project Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-text">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: #666;">Part of: Massive Project Title</p>
-            <h1>Subsystem 1: Chassis</h1>
+            <h1>Ghana Project: Geospatial Engineering &amp; Water Systems</h1>
         </div>
     </section>
 
-    <!-- Sub-Project Details -->
-    <section class="section">
-        <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            
-            <img src="images/sub1-detail.jpg" alt="Subsystem Detail" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
+    <!-- Project Details Section -->
+    <section class="section bg-light" style="padding: 4rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto; line-height: 1.8;">
 
-            <h2>Design Requirements</h2>
-            <p>What were the specific constraints for just this subsystem? Weight limits, material requirements, or spatial boundaries?</p>
+            <!-- Wrapper to keep text readable and centered -->
+            <div style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <h2>Summary</h2>
+                <p>From January to May 2025, I volunteered in the Ketu region of Ghana with Villanova Engineering Service Learning, partnering with LifeTime Wells International, an organization that has installed more than 3,300 water wells across Ghana and Tanzania since 2004. The work fell into two connected efforts: documenting and assessing the hand pump wells that already serve communities across the region, and physically installing new hand pump wells to bring clean, potable water to communities that needed it.</p>
 
-            <h2>Engineering Process</h2>
-            <p>Walk through the CAD iteration, testing, or manufacturing steps for this specific component.</p>
-            
-            <h2>Integration</h2>
-            <p>How did this component successfully connect back to the massive overarching project?</p>
-            
-            <!-- Back to Main Project Button -->
-            <div style="margin-top: 4rem; text-align: center;">
-                <a href="project1.html" class="button button-outline">&larr; Back to Main Project</a>
+                <h3 class="sub-heading">Well Assessment &amp; GPS Mapping</h3>
+                <p>Working alongside other members of the team, I visited more than 270 communities and villages in Ketu that had hand pump wells previously installed by LifeTime Wells. At every stop we had three objectives. First, we recorded the exact GPS coordinates of each well so it could be loaded into ArcGIS; the goal of the resulting database is to help local communities locate their nearest source of clean water. Second, we inspected each pump and noted its condition, so that the status of every community&rsquo;s well is known and repairs can be planned. Third, we sat down with community members to understand what the well means to them and to listen to their questions and concerns. This inspection, maintenance, and mapping work covered 200+ wells and supports infrastructure documentation and service planning for the region.</p>
+                <p>Many of the hand pumps we assessed were more than 15 years old, and some had significant damage. We also saw that some communities are trying to switch from manual pumping to mechanized, automatic pumps.</p>
+
+                <h3 class="sub-heading">Hand Pump Installation</h3>
+                <p>The second task was installing new hand pump wells. I helped install three, and all three were supplying water to their communities when we finished. On the hardware side, I assembled the three hand-pump well heads, installed the plunger assemblies with traveling valves and piston seals, and deployed 296 feet of steel pump rod. The plunger assembly, driven by the steel rod from the pump handle above, is what lifts groundwater up out of the borehole with each stroke, so getting the valves, seals, and rod string right is what turns a borehole into a working water source.</p>
             </div>
 
+            <!-- Fabrication Gallery -->
+            <div style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <h2 style="text-align: center;">Fabrication Gallery</h2>
+            </div>
+            <div class="image-grid">
+                <div class="img-container">
+                    <img src="images/Ghana_1.jpg" alt="Team photo in the field around an existing hand pump" loading="lazy">
+                    <p class="caption"><em>Figure 1: Team photo in the field around an existing hand pump well.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_4.jpg" alt="An old hand pump in a community" loading="lazy">
+                    <p class="caption"><em>Figure 2: One of the many hand pumps in the communities that is more than 15 years old.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_6.jpg" alt="Another old hand pump in a community" loading="lazy">
+                    <p class="caption"><em>Figure 3: Another hand pump more than 15 years old, in a community we visited.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_2.jpg" alt="Hole rusted through the housing of an assessed hand pump" loading="lazy">
+                    <p class="caption"><em>Figure 4: Damage on an existing hand pump we assessed, with a hole through the pump housing.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_3.jpg" alt="Looking down into the damaged housing of the assessed hand pump" loading="lazy">
+                    <p class="caption"><em>Figure 5: A closer look at the damage to the same assessed hand pump.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_7.jpg" alt="Mechanized automatic pump" loading="lazy">
+                    <p class="caption"><em>Figure 6: A mechanized, automatic pump. Some communities are trying to switch from manual pumping to systems like this.</em></p>
+                </div>
+                <div class="img-container wide">
+                    <img src="images/Ghana_Map.png" alt="ArcGIS map of the Ketu region showing installed and existing pumps" loading="lazy">
+                    <p class="caption"><em>Figure 7: ArcGIS map of the Ketu region, where we did asset management and GPS mapping of existing wells. The red markers are existing pumps we mapped, and the three green markers are the pumps we installed.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_8.jpg" alt="Site setup at the first hand pump installation" loading="lazy">
+                    <p class="caption"><em>Figure 8: Site setup at the first hand pump installation.</em></p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Ghana_9.jpg" alt="Borehole at the first hand pump installation site" loading="lazy">
+                    <p class="caption"><em>Figure 9: The borehole at the first installation site.</em></p>
+                </div>
+                <div class="img-container solo">
+                    <img src="images/Ghana_10.jpg" alt="Attaching the head of the pump at the first installation site" loading="lazy">
+                    <p class="caption"><em>Figure 10: Attaching the head of the pump at the first installation site.</em></p>
+                </div>
+            </div>
+
+            <!-- Installation Videos -->
+            <div style="max-width: 800px; margin: 3rem auto; text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">Installation Videos</h2>
+
+                <div class="video-block">
+                    <video controls preload="metadata">
+                        <source src="images/Ghana_FirstPump.mp4" type="video/mp4">
+                        <source src="images/Ghana_FirstPump.mov" type="video/quicktime">
+                        Your browser does not support embedded video.
+                    </video>
+                    <p class="caption"><em>Video 1: The first hand pump we installed working for the first time, pumping clean groundwater.</em></p>
+                </div>
+
+                <div class="video-block">
+                    <video controls preload="metadata">
+                        <source src="images/Ghana_Timelapse.mp4" type="video/mp4">
+                        <source src="images/Ghana_Timelapse.mov" type="video/quicktime">
+                        Your browser does not support embedded video.
+                    </video>
+                    <p class="caption"><em>Video 2: Timelapse of the second hand pump well installation, from start to finish.</em></p>
+                </div>
+
+                <div class="video-block">
+                    <video controls preload="metadata">
+                        <source src="images/Ghana_PumpWorking.mp4" type="video/mp4">
+                        <source src="images/Ghana_PumpWorking.mov" type="video/quicktime">
+                        Your browser does not support embedded video.
+                    </video>
+                    <p class="caption"><em>Video 3: The hand pump from the timelapse, working after installation.</em></p>
+                </div>
+            </div>
+
+            <!-- Closing photo -->
+            <div style="max-width: 800px; margin: 3rem auto; text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">Wrapping Up</h2>
+                <div class="img-container">
+                    <img src="images/Ghana_11.jpg" alt="Team photo with local schoolchildren" loading="lazy">
+                    <p class="caption"><em>Figure 11: Team photo with local schoolchildren.</em></p>
+                </div>
+            </div>
+
+            <!-- Reflection -->
+            <div style="max-width: 800px; margin: 3rem auto 0 auto;">
+                <h2>What I Learned</h2>
+                <p>Professionally, this experience taught me how to manage GPS mapping software systems like ArcGIS, how manual hand pump wells function and how to install one, how water salinity relates to a well&rsquo;s proximity to the ocean, and how much maintenance and upkeep it takes to keep a well running for the long term.</p>
+                <p>Personally, it was the most impactful experience I have taken part in. I was immersed in Ghana&rsquo;s culture and history, met people with very different stories and backgrounds, and left with a deeper appreciation for basic necessities I had taken for granted. It also changed how I think about service: service is not about what I think would be best for a community, but about doing what others need from me, even when it is tedious or difficult. The only way to help solve a community&rsquo;s problem is to understand it, and the only way to understand it is to ask, listen, and experience it firsthand.</p>
+            </div>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="project1.html" class="button button-outline">&larr; Back to Service Learning Hub</a>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Sam Tatum | Mechanical Engineer</p>
+    <footer style="text-align: center; padding: 2rem;">
+        <p>&copy; 2026 Sam Tatum | Mechanical Engineer</p>
     </footer>
-
 </body>
 </html>
