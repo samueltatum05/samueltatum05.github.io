@@ -108,11 +108,9 @@ h1 {
     margin-bottom: 35px;
 }
 
-/* Sub-page hero titles: left-justified, lined up with the left edge of the 800px content column below */
+/* Sub-page hero titles: centered */
 .hero.page-hero .hero-text {
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Hero Image Placeholder Styling */
