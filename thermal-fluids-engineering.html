@@ -25,6 +25,8 @@
             font-size: 1.05rem;
             font-weight: bold;
             text-align: center;
+            justify-content: center; /* style.css makes .project-card a flex row, so center the label on the main axis */
+            align-items: center;
         }
         .project-card:hover {
             transform: translateX(8px);
@@ -49,7 +51,7 @@
     </nav>
 
     <!-- Project Hero Section -->
-    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <section class="hero page-hero" style="min-height: 40vh; display: flex; align-items: center; justify-content: center;">
         <div class="hero-text">
             <h1>Thermal Fluid Systems Design</h1>
         </div>
