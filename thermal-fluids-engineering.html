@@ -12,7 +12,7 @@
             flex-direction: column;
             gap: 1rem;
             max-width: 500px;
-            margin: 2rem auto 0 auto;
+            margin: 1.25rem auto 0 auto;
         }
         .project-card {
             background: #fff;
@@ -25,6 +25,17 @@
             font-size: 1.05rem;
             font-weight: bold;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .project-card .card-cta {
+            margin-top: 0;
+            align-self: center;
+        }
+        .project-card > span:first-child {
+            text-align: left;
         }
         .project-card:hover {
             transform: translateX(8px);
@@ -63,14 +74,20 @@
             <h2>The Big Picture</h2>
             <p>Designed, modeled, and parametrically optimized thermal-fluid systems across diverse applications ranging from solar thermal energy storage to data center GPU server rack cooling loops. Evaluated thermodynamic and hydraulic trade-offs (balancing heat transfer effectiveness against pressure drop and pump power demands) while physically fabricating and testing a functional heat exchanger and cold plate to empirically validate theoretical models.</p>
 
+            <!-- Click Hint -->
+            <p class="click-hint">
+                <span class="click-hint-icon" aria-hidden="true">&darr;</span>
+                <span>Click on a project below to explore it in detail.</span>
+            </p>
+
             <!-- Project Selection List -->
             <div class="project-list">
-                <a href="cold-plate-liquid-cooling-system.html" class="project-card">Cold Plate Liquid Cooling System</a>
-                <a href="data-center-rack-liquid-cooling-system.html" class="project-card">Data Center Rack Liquid Cooling System</a>
-                <a href="deep-space-probe-power-system.html" class="project-card">Deep Space Probe Power System</a>
-                <a href="thermal-energy-storage.html" class="project-card">Thermal Energy Storage</a>
-                <a href="mini-heat-exchanger.html" class="project-card">Mini Heat Exchanger</a>
-                <a href="data-center-research.html" class="project-card">Data Center Research</a>
+                <a href="cold-plate-liquid-cooling-system.html" class="project-card"><span>Cold Plate Liquid Cooling System</span><span class="card-cta">View project &rarr;</span></a>
+                <a href="data-center-rack-liquid-cooling-system.html" class="project-card"><span>Data Center Rack Liquid Cooling System</span><span class="card-cta">View project &rarr;</span></a>
+                <a href="deep-space-probe-power-system.html" class="project-card"><span>Deep Space Probe Power System</span><span class="card-cta">View project &rarr;</span></a>
+                <a href="thermal-energy-storage.html" class="project-card"><span>Thermal Energy Storage</span><span class="card-cta">View project &rarr;</span></a>
+                <a href="mini-heat-exchanger.html" class="project-card"><span>Mini Heat Exchanger</span><span class="card-cta">View project &rarr;</span></a>
+                <a href="data-center-research.html" class="project-card"><span>Data Center Research</span><span class="card-cta">View project &rarr;</span></a>
             </div>
 
             <!-- Back Button -->

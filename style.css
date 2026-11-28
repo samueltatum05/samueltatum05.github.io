@@ -251,6 +251,79 @@ h1 {
     color: var(--text-main);
 }
 
+/* --- Click Hints (shared by the home page and every hub page) --- */
+.section .click-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 2rem auto 0 auto;
+    padding: 10px 22px;
+    background-color: var(--bg-white);
+    border: 2px solid var(--accent-color);
+    border-radius: 999px;
+    color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Used on the home page, where the hint sits right under the "Projects" heading */
+.section .click-hint-under-heading {
+    margin: -10px auto 35px auto;
+}
+
+.click-hint-icon {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 800;
+    animation: click-hint-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes click-hint-bounce {
+    0%, 100% { transform: translateY(-2px); }
+    50%      { transform: translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .click-hint-icon {
+        animation: none;
+    }
+}
+
+/* Small "button" shown on every clickable project card so it reads as clickable */
+.card-cta {
+    display: inline-block;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    margin-top: 18px;
+    padding: 8px 18px;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.project-card:hover .card-cta {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
 /* --- Resume Section --- */
 .resume-container {
     margin-top: 30px;

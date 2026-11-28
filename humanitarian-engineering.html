@@ -12,7 +12,7 @@
             flex-direction: column;
             gap: 1.5rem; /* Increased gap for larger cards */
             max-width: 800px; /* Widened to make the cards larger overall */
-            margin: 2rem auto 0 auto;
+            margin: 1.25rem auto 0 auto;
         }
         .project-card {
             display: flex;
@@ -64,6 +64,10 @@
         padding: 1.5rem; /* Adjusts padding so it looks balanced vertically */
         text-align: center; /* Centers the text nicely on a phone screen */
     }
+
+    .project-content .card-cta {
+        align-self: center;
+    }
 }
     </style>
 </head>
@@ -98,6 +102,12 @@
             <h2>The Big Picture</h2>
             <p>Semester-long international engineering projects deployed across Africa and South America, focusing on end-to-end design, manufacturing, field testing, and maintenance of sustainable technical systems. Combined hands-on mechanical fabrication, geospatial analysis (ArcGIS), and electromechanical integration to deliver high-impact engineering solutions to underserved communities.</p>
 
+            <!-- Click Hint -->
+            <p class="click-hint">
+                <span class="click-hint-icon" aria-hidden="true">&darr;</span>
+                <span>Click on a project below to explore it in detail.</span>
+            </p>
+
             <!-- Project Selection List -->
             <div class="project-list">
 
@@ -107,6 +117,7 @@
                     <div class="project-content">
                         Ecuador Project:<br>
                         <span style="font-weight: normal;">Robotics Engineering &amp; STEM Education</span>
+                        <span class="card-cta">View project &rarr;</span>
                     </div>
                 </a>
                 
@@ -116,6 +127,7 @@
                     <div class="project-content">
                         Ghana Project:<br>
                         <span style="font-weight: normal;">Geospatial Engineering &amp; Water Systems</span>
+                        <span class="card-cta">View project &rarr;</span>
                     </div>
                 </a>
 
@@ -125,6 +137,7 @@
                     <div class="project-content">
                         Peru Project:<br>
                         <span style="font-weight: normal;">Sustainable Energy Engineering</span>
+                        <span class="card-cta">View project &rarr;</span>
                     </div>
                 </a>
 
@@ -134,6 +147,7 @@
                     <div class="project-content">
                         Kenya Project:<br>
                         <span style="font-weight: normal;">Civil Engineering &amp; Community Development</span>
+                        <span class="card-cta">View project &rarr;</span>
                     </div>
                 </a>
                 
