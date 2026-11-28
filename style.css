@@ -302,28 +302,6 @@ h1 {
     }
 }
 
-/* Small "button" shown on every clickable project card so it reads as clickable */
-.card-cta {
-    display: inline-block;
-    flex: 0 0 auto;
-    align-self: flex-start;
-    margin-top: 18px;
-    padding: 8px 18px;
-    background-color: var(--primary-color);
-    color: var(--bg-white);
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.4;
-    white-space: nowrap;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
-}
-
-.project-card:hover .card-cta {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-}
-
 /* --- Resume Section --- */
 .resume-container {
     margin-top: 30px;
